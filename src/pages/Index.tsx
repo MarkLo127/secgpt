@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
-import { BarChart, Search, FileText, Zap, Layers, Cpu } from "lucide-react";
+import { BarChart, Search, FileText, Zap, Layers, Cpu, Upload } from "lucide-react";
 
 const Index = () => {
   const { t } = useLanguage();
@@ -49,10 +49,10 @@ const Index = () => {
               {/* Step 1 */}
               <div className="glass-card p-6 flex flex-col items-center text-center space-y-4 hover:scale-105 transition-transform duration-300">
                 <div className="h-16 w-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                  <FileText className="h-8 w-8 text-primary" />
+                  <Upload className="h-8 w-8 text-primary" />
                 </div>
                 <h3 className="text-xl font-semibold">{t("home.how_it_works.step1.title")}</h3>
-                <p className="text-muted-foreground">{t("home.how_it_works.step1.description")}</p>
+                <p className="text-muted-foreground">上傳文件或API取得</p>
               </div>
 
               {/* Step 2 */}
