@@ -35,7 +35,7 @@ This project is built using modern frontend technologies:
 
 Before development, ensure you have installed the following tools:
 - Node.js (latest LTS version recommended)
-- npm or yarn
+- npm or pnpm
 
 ### Local Development Steps
 
@@ -49,12 +49,12 @@ cd secgpt
 # Install dependencies
 npm install
 # or
-yarn
+pnpm install
 
 # Start the development server
 npm run dev
 # or
-yarn dev
+pnpm run dev
 ```
 
 After starting the development server, visit http://localhost:5173 to view the application.
