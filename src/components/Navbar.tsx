@@ -1,22 +1,20 @@
-
 import { Link } from "react-router-dom";
 import { useTheme } from "@/providers/ThemeProvider";
 import { useLanguage } from "@/providers/LanguageProvider";
 import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Moon, Sun, Laptop, Globe } from "lucide-react";
-
 export default function Navbar() {
-  const { theme, setTheme } = useTheme();
-  const { language, setLanguage, t } = useLanguage();
-
-  return (
-    <nav className="w-full backdrop-blur-sm bg-background/80 sticky top-0 z-50 border-b border-border">
+  const {
+    theme,
+    setTheme
+  } = useTheme();
+  const {
+    language,
+    setLanguage,
+    t
+  } = useLanguage();
+  return <nav className="w-full backdrop-blur-sm bg-background/80 sticky top-0 z-50 border-b border-border">
       <div className="container flex items-center justify-between h-16 px-4 mx-auto">
         <Link to="/" className="flex items-center">
           <span className="text-2xl font-bold tech-text-gradient">SECGPT</span>
@@ -24,7 +22,7 @@ export default function Navbar() {
 
         <div className="flex items-center space-x-4">
           <Link to="/">
-            <Button variant="ghost">{t("nav.home")}</Button>
+            
           </Link>
 
           <DropdownMenu>
@@ -47,13 +45,7 @@ export default function Navbar() {
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="outline" size="icon">
-                {theme === "light" ? (
-                  <Sun className="h-[1.2rem] w-[1.2rem]" />
-                ) : theme === "dark" ? (
-                  <Moon className="h-[1.2rem] w-[1.2rem]" />
-                ) : (
-                  <Laptop className="h-[1.2rem] w-[1.2rem]" />
-                )}
+                {theme === "light" ? <Sun className="h-[1.2rem] w-[1.2rem]" /> : theme === "dark" ? <Moon className="h-[1.2rem] w-[1.2rem]" /> : <Laptop className="h-[1.2rem] w-[1.2rem]" />}
                 <span className="sr-only">{t("nav.theme")}</span>
               </Button>
             </DropdownMenuTrigger>
@@ -74,6 +66,5 @@ export default function Navbar() {
           </DropdownMenu>
         </div>
       </div>
-    </nav>
-  );
+    </nav>;
 }
