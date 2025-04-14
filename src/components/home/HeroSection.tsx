@@ -1,13 +1,11 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/providers/LanguageProvider";
-
 const HeroSection = () => {
-  const { t } = useLanguage();
-  
-  return (
-    <section className="relative py-24 md:py-36 overflow-hidden">
+  const {
+    t
+  } = useLanguage();
+  return <section className="relative py-24 md:py-36 overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-secgpt-accent/20 via-background to-background"></div>
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center space-y-8 text-center">
@@ -27,15 +25,11 @@ const HeroSection = () => {
               </Button>
             </Link>
             <Link to="/chat">
-              <Button size="lg" variant="outline" className="border-secgpt-blue text-secgpt-blue hover:bg-secgpt-blue/10">
-                {t("home.feature2.title")}
-              </Button>
+              
             </Link>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
