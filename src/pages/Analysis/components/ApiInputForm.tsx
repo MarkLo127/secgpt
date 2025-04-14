@@ -1,3 +1,4 @@
+
 import React from "react";
 import { useLanguage } from "@/providers/LanguageProvider";
 import { Label } from "@/components/ui/label";
@@ -22,20 +23,25 @@ const ApiInputForm = ({
   const { t, language } = useLanguage();
 
   const renderSecApiHint = () => {
-    const linkText = t("analysis.secapi.linkText");
-    const hintTemplate = t("analysis.secapi.hint");
+    const secApiUrl = "https://sec-api.io";
+    const hintTemplate = language === "zh" 
+      ? "在{secApiLink}獲取您的SEC API密鑰" 
+      : "Get your SEC API key at {secApiLink}";
     
-    return hintTemplate.replace('{secApiLink}', linkText).split('{secApiLink}').map((part, index) => 
-      index % 2 === 0 ? part : (
-        <a 
-          key={index} 
-          href={linkText} 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="text-secgpt-accent hover:underline font-semibold"
-        >
-          {linkText}
-        </a>
+    return hintTemplate.replace('{secApiLink}', secApiUrl).split('{secApiLink}').map((part, index) => 
+      index === 0 ? part : (
+        <>
+          <a 
+            key="sec-api-link" 
+            href={secApiUrl} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-secgpt-accent hover:underline font-semibold"
+          >
+            {secApiUrl}
+          </a>
+          {part}
+        </>
       )
     );
   };
