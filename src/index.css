@@ -88,3 +88,24 @@
 .tech-text-gradient {
   @apply bg-clip-text text-transparent bg-gradient-to-r from-secgpt-blue to-secgpt-accent;
 }
+
+/* Enhanced hover effects */
+.hover-scale {
+  @apply transition-transform duration-300 hover:scale-105;
+}
+
+.hover-shadow {
+  @apply transition-shadow duration-300 hover:shadow-lg;
+}
+
+/* Enhanced card styling */
+.feature-card {
+  @apply bg-background/80 border border-secgpt-blue/10 shadow-md rounded-lg 
+         transition-all duration-300 hover:shadow-xl hover:border-secgpt-blue/30;
+}
+
+/* Enhanced button styling */
+.gradient-button {
+  @apply bg-gradient-to-r from-secgpt-blue to-secgpt-accent hover:from-secgpt-accent 
+         hover:to-secgpt-blue transition-all duration-300;
+}
