@@ -1,3 +1,4 @@
+
 import React from "react";
 import { FileText } from "lucide-react";
 import { useLanguage } from "@/providers/LanguageProvider";
@@ -9,6 +10,7 @@ import { Globe, Upload } from "lucide-react";
 import { FormData } from "../types";
 import ApiInputForm from "./ApiInputForm";
 import FileUploadForm from "./FileUploadForm";
+
 interface AnalysisCardProps {
   formData: FormData;
   activeTab: string;
@@ -18,6 +20,7 @@ interface AnalysisCardProps {
   handleFileChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handleSubmit: (e: React.FormEvent) => void;
 }
+
 const AnalysisCard = ({
   formData,
   activeTab,
@@ -31,9 +34,10 @@ const AnalysisCard = ({
     t,
     language
   } = useLanguage();
+
   return <Card className="glass-card shadow-lg border-opacity-50 animate-slide-in">
       <CardHeader>
-        <CardTitle className="flex items-center gap-2 text-base font-normal text-center">
+        <CardTitle className="flex items-center justify-center gap-2 text-base font-normal text-center">
           <FileText className="h-5 w-5 text-secgpt-accent" />
           {t("analysis.title")}
         </CardTitle>
@@ -73,4 +77,5 @@ const AnalysisCard = ({
       </CardFooter>
     </Card>;
 };
+
 export default AnalysisCard;
