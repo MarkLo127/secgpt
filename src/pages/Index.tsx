@@ -1,12 +1,83 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { useLanguage } from "@/providers/LanguageProvider";
+import { Button } from "@/components/ui/button";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import { Link } from "react-router-dom";
+import { BarChart, Search, FileText } from "lucide-react";
 
 const Index = () => {
+  const { t } = useLanguage();
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="flex flex-col min-h-screen">
+      <Navbar />
+      
+      <main className="flex-1">
+        {/* Hero Section */}
+        <section className="relative py-20 md:py-32 overflow-hidden">
+          <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-secgpt-accent/20 via-background to-background"></div>
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center space-y-4 text-center">
+              <h1 className="text-3xl md:text-5xl font-bold tech-text-gradient animate-fade-in">
+                {t("home.title")}
+              </h1>
+              <p className="text-xl text-muted-foreground md:text-2xl max-w-[800px] animate-fade-in">
+                {t("home.subtitle")}
+              </p>
+              <p className="text-muted-foreground max-w-[600px] animate-fade-in">
+                {t("home.description")}
+              </p>
+              <div className="animate-slide-in">
+                <Link to="/analysis">
+                  <Button size="lg" className="mt-6">
+                    {t("home.cta")}
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 md:py-24">
+          <div className="container px-4 md:px-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
+              {t("home.features")}
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Feature 1 */}
+              <div className="glass-card p-6 flex flex-col items-center text-center">
+                <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                  <FileText className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">{t("home.feature1.title")}</h3>
+                <p className="text-muted-foreground">{t("home.feature1.description")}</p>
+              </div>
+
+              {/* Feature 2 */}
+              <div className="glass-card p-6 flex flex-col items-center text-center">
+                <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                  <Search className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">{t("home.feature2.title")}</h3>
+                <p className="text-muted-foreground">{t("home.feature2.description")}</p>
+              </div>
+
+              {/* Feature 3 */}
+              <div className="glass-card p-6 flex flex-col items-center text-center">
+                <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                  <BarChart className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">{t("home.feature3.title")}</h3>
+                <p className="text-muted-foreground">{t("home.feature3.description")}</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
     </div>
   );
 };
