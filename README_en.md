@@ -41,7 +41,7 @@ Before development, ensure you have installed the following tools:
 
 ```bash
 # Clone the repository
-git clone <Project Git URL>
+git clone https://github.com/MarkLo127/secgpt.git
 
 # Enter the project directory
 cd secgpt
