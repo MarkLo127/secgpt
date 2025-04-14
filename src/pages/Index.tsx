@@ -52,7 +52,7 @@ const Index = () => {
                   <Upload className="h-8 w-8 text-primary" />
                 </div>
                 <h3 className="text-xl font-semibold">{t("home.how_it_works.step1.title")}</h3>
-                <p className="text-muted-foreground">上傳文件或API取得</p>
+                <p className="text-muted-foreground">{t("home.how_it_works.step1.description")}</p>
               </div>
 
               {/* Step 2 */}
