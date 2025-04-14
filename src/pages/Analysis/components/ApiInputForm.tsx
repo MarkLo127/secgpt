@@ -1,17 +1,7 @@
-
 import React from "react";
 import { useLanguage } from "@/providers/LanguageProvider";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { Key, Lock, Globe, BarChart3, FileText } from "lucide-react";
 import { FormData } from "../types";
 import DocumentTypeSelect from "./DocumentTypeSelect";
@@ -29,7 +19,26 @@ const ApiInputForm = ({
   handleDocTypeChange, 
   handleSubmit 
 }: ApiInputFormProps) => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+
+  const renderSecApiHint = () => {
+    const linkText = t("analysis.secapi.linkText");
+    const hintTemplate = t("analysis.secapi.hint");
+    
+    return hintTemplate.replace('{secApiLink}', linkText).split('{secApiLink}').map((part, index) => 
+      index % 2 === 0 ? part : (
+        <a 
+          key={index} 
+          href={linkText} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="text-secgpt-accent hover:underline"
+        >
+          {linkText}
+        </a>
+      )
+    );
+  };
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
@@ -83,7 +92,7 @@ const ApiInputForm = ({
             className="transition-all focus:ring-2 focus:ring-secgpt-accent focus:border-transparent"
           />
           <p className="text-xs text-muted-foreground mt-1">
-            {t("analysis.secapi.hint")}
+            {renderSecApiHint()}
           </p>
         </div>
         
