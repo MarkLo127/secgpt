@@ -37,7 +37,7 @@ const AnalysisCard = ({
   handleFileChange,
   handleSubmit,
 }: AnalysisCardProps) => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <Card className="glass-card shadow-lg border-opacity-50 animate-slide-in">
@@ -56,11 +56,11 @@ const AnalysisCard = ({
           <TabsList className="grid w-full grid-cols-2 mb-6">
             <TabsTrigger value="api" className="flex items-center gap-2">
               <Globe className="h-4 w-4" />
-              Fetch via API
+              {language === "zh" ? "通过API获取" : "Fetch via API"}
             </TabsTrigger>
             <TabsTrigger value="upload" className="flex items-center gap-2">
               <Upload className="h-4 w-4" />
-              Upload Document
+              {language === "zh" ? "上传文档" : "Upload Document"}
             </TabsTrigger>
           </TabsList>
           

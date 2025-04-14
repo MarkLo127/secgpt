@@ -23,7 +23,7 @@ const FileUploadForm = ({
   handleFileChange,
   handleSubmit
 }: FileUploadFormProps) => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const fileInputRef = useRef<HTMLInputElement>(null);
   
   const handleFileUploadClick = () => {
@@ -56,7 +56,7 @@ const FileUploadForm = ({
           <div className="space-y-2">
             <Label htmlFor="baseUrl_upload" className="flex items-center gap-2">
               <Globe className="h-4 w-4 text-secgpt-accent" />
-              {t("analysis.baseurl.label")} (Optional)
+              {language === "zh" ? t("analysis.baseurl.label") + " (可选)" : t("analysis.baseurl.label") + " (Optional)"}
             </Label>
             <Input
               id="baseUrl_upload"
@@ -73,7 +73,7 @@ const FileUploadForm = ({
         <div className="space-y-2">
           <Label htmlFor="fileUpload" className="flex items-center gap-2">
             <Upload className="h-4 w-4 text-secgpt-accent" />
-            Upload SEC Document
+            {language === "zh" ? "上传SEC文档" : "Upload SEC Document"}
           </Label>
           <div className="flex flex-col items-center justify-center gap-4 p-8 border-2 border-dashed border-muted-foreground/30 rounded-lg bg-background/50">
             <input
@@ -88,16 +88,24 @@ const FileUploadForm = ({
               <Upload className="h-10 w-10 text-muted-foreground" />
               {formData.file ? (
                 <>
-                  <p className="font-medium">File Selected: {formData.file.name}</p>
+                  <p className="font-medium">
+                    {language === "zh" ? "已选择文件：" : "File Selected: "}{formData.file.name}
+                  </p>
                   <p className="text-sm text-muted-foreground">
                     {(formData.file.size / 1024 / 1024).toFixed(2)} MB
                   </p>
                 </>
               ) : (
                 <>
-                  <p className="font-medium">Drag and drop files here or click to upload</p>
+                  <p className="font-medium">
+                    {language === "zh" 
+                      ? "将文件拖放到此处或点击上传" 
+                      : "Drag and drop files here or click to upload"}
+                  </p>
                   <p className="text-sm text-muted-foreground">
-                    Supports PDF, DOC, DOCX, TXT, HTML, XBRL, and XML files
+                    {language === "zh" 
+                      ? "支持PDF、DOC、DOCX、TXT、HTML、XBRL和XML文件" 
+                      : "Supports PDF, DOC, DOCX, TXT, HTML, XBRL, and XML files"}
                   </p>
                 </>
               )}
@@ -108,7 +116,7 @@ const FileUploadForm = ({
               className="mt-2"
               onClick={handleFileUploadClick}
             >
-              Choose File
+              {language === "zh" ? "选择文件" : "Choose File"}
             </Button>
           </div>
         </div>

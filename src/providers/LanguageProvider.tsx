@@ -67,6 +67,14 @@ const translations = {
     "chat.error": "Error processing your request",
     "chat.back": "Back to Home",
     "footer.rights": "All Rights Reserved",
+    "analysis.upload.choosefile": "Choose File",
+    "analysis.upload.dragdrop": "Drag and drop files here or click to upload",
+    "analysis.upload.supports": "Supports PDF, DOC, DOCX, TXT, HTML, XBRL, and XML files",
+    "analysis.upload.fileselected": "File Selected",
+    "analysis.upload.label": "Upload SEC Document",
+    "analysis.fetch.api": "Fetch via API",
+    "analysis.upload.document": "Upload Document",
+    "analysis.footer.note": "All API keys are securely stored in your browser's session storage and will never be sent to our servers."
   },
   zh: {
     "home.title": "SECGPT - AI驅動的SEC文件分析",
@@ -100,7 +108,7 @@ const translations = {
     "analysis.subtitle": "為特定公司分析SEC文件",
     "analysis.openai.label": "OpenAI API密鑰",
     "analysis.openai.placeholder": "輸入您的OpenAI API密鑰",
-    "analysis.baseurl.label": "基礎URL（可選）",
+    "analysis.baseurl.label": "基礎URL",
     "analysis.baseurl.placeholder": "輸入自定義基礎URL（可選）",
     "analysis.secapi.label": "SEC API密鑰",
     "analysis.secapi.placeholder": "輸入您的SEC API密鑰",
@@ -120,6 +128,14 @@ const translations = {
     "chat.error": "處理您的請求時出錯",
     "chat.back": "返回首頁",
     "footer.rights": "版權所有",
+    "analysis.upload.choosefile": "選擇文件",
+    "analysis.upload.dragdrop": "將文件拖放到此處或點擊上傳",
+    "analysis.upload.supports": "支持PDF、DOC、DOCX、TXT、HTML、XBRL和XML文件",
+    "analysis.upload.fileselected": "已選擇文件",
+    "analysis.upload.label": "上傳SEC文檔",
+    "analysis.fetch.api": "通過API獲取",
+    "analysis.upload.document": "上傳文檔",
+    "analysis.footer.note": "所有API密鑰都安全地存儲在您瀏覽器的會話存儲中，絕不會發送到我們的服務器。"
   }
 };
 
