@@ -1,4 +1,3 @@
-
 import { useLanguage } from "@/providers/LanguageProvider";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
