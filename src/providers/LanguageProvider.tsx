@@ -1,3 +1,4 @@
+
 import { createContext, useContext, useEffect, useState } from "react";
 
 type Language = "en" | "zh";
@@ -33,6 +34,15 @@ const translations = {
     "home.feature2.description": "Ask complex questions about financial filings and get accurate, contextual responses.",
     "home.feature3.title": "Advanced Data Extraction",
     "home.feature3.description": "Extract specific financial data points and insights from complex documents quickly.",
+    "home.feature4.title": "Trend Analysis",
+    "home.feature4.description": "Identify and visualize historical trends in key financial metrics to understand the long-term direction of company performance.",
+    "home.feature4.footer": "Multi-year financial data comparison and chart visualization",
+    "home.feature5.title": "Competitor Comparison",
+    "home.feature5.description": "Compare target companies with industry competitors side-by-side to understand relative strengths and potential risks.",
+    "home.feature5.footer": "Industry benchmarking and competitive landscape assessment",
+    "home.feature6.title": "Compliance Review",
+    "home.feature6.description": "Automatically identify and flag compliance issues and disclosure anomalies in company reports to reduce legal and regulatory risks.",
+    "home.feature6.footer": "Regulatory compliance risk early warning",
     "nav.home": "Home",
     "nav.analysis": "Analysis",
     "nav.language": "Language",
@@ -74,7 +84,8 @@ const translations = {
     "analysis.upload.label": "Upload SEC Document",
     "analysis.fetch.api": "Fetch via API",
     "analysis.upload.document": "Upload Document",
-    "analysis.footer.note": "All API keys are securely stored in your browser's session storage and will never be sent to our servers."
+    "analysis.footer.note": "All API keys are securely stored in your browser's session storage and will never be sent to our servers.",
+    "analysis.sec.edgar.link": "Search and download documents from SEC EDGAR"
   },
   zh: {
     "home.title": "SECGPT - AI驅動的SEC文件分析",
@@ -95,6 +106,15 @@ const translations = {
     "home.feature2.description": "就財務申報提出複雜問題，獲得準確的上下文回應。",
     "home.feature3.title": "高級數據提取",
     "home.feature3.description": "快速從複雜文件中提取具體的財務數據點和洞察。",
+    "home.feature4.title": "趨勢分析",
+    "home.feature4.description": "識別和可視化關鍵財務指標的歷史趨勢，以了解公司績效的長期走向。",
+    "home.feature4.footer": "多年財務數據比較和圖表可視化",
+    "home.feature5.title": "競爭對手比較",
+    "home.feature5.description": "將目標公司與行業競爭對手進行並排比較，了解相對優勢和潛在風險。",
+    "home.feature5.footer": "行業基準和競爭格局評估",
+    "home.feature6.title": "合規審查",
+    "home.feature6.description": "自動識別和標記公司報告中的合規問題和信息披露異常，以降低法律和監管風險。",
+    "home.feature6.footer": "監管合規風險早期預警",
     "nav.home": "首頁",
     "nav.analysis": "分析",
     "nav.language": "語言",
@@ -136,7 +156,8 @@ const translations = {
     "analysis.upload.label": "上傳SEC文檔",
     "analysis.fetch.api": "通過API獲取",
     "analysis.upload.document": "上傳文檔",
-    "analysis.footer.note": "所有API密鑰都安全地存儲在您瀏覽器的會話存儲中，絕不會發送到我們的服務器。"
+    "analysis.footer.note": "所有API密鑰都安全地存儲在您瀏覽器的會話存儲中，絕不會發送到我們的服務器。",
+    "analysis.sec.edgar.link": "從SEC EDGAR搜索和下載文件"
   }
 };
 

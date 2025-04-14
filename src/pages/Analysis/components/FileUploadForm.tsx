@@ -4,7 +4,7 @@ import { useLanguage } from "@/providers/LanguageProvider";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Key, Globe, Upload } from "lucide-react";
+import { Key, Globe, Upload, ExternalLink } from "lucide-react";
 import { FormData } from "../types";
 import DocumentTypeSelect from "./DocumentTypeSelect";
 
@@ -118,6 +118,23 @@ const FileUploadForm = ({
             >
               {language === "zh" ? "選擇文件" : "Choose File"}
             </Button>
+            
+            {/* SEC EDGAR Link */}
+            <div className="mt-4 text-sm text-muted-foreground">
+              <a 
+                href="https://www.sec.gov/edgar/search/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 text-secgpt-blue hover:text-secgpt-accent transition-colors"
+              >
+                <ExternalLink className="h-3.5 w-3.5" />
+                <span>
+                  {language === "zh" 
+                    ? "從SEC EDGAR搜索和下載文件" 
+                    : "Search and download documents from SEC EDGAR"}
+                </span>
+              </a>
+            </div>
           </div>
         </div>
         
