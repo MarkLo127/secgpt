@@ -32,7 +32,7 @@ const ApiInputForm = ({
           href={linkText} 
           target="_blank" 
           rel="noopener noreferrer" 
-          className="text-secgpt-accent hover:underline"
+          className="text-secgpt-accent hover:underline font-semibold"
         >
           {linkText}
         </a>
