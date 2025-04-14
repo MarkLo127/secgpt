@@ -1,150 +1,76 @@
 
-# 歡迎使用您的 Lovable 項目
+# SECGPT - 證券文檔智能分析平台
 
-## 項目信息
+## 項目簡介
 
-**URL**: https://lovable.dev/projects/dcf3b57d-3062-4591-8925-df38906d2c74
+SECGPT是一個專門針對上市公司證券文檔進行智能分析的平台。我們的系統能夠處理各類SEC文件，包括10-K年度報告、10-Q季度報告、8-K重大事件公告等，為投資者、分析師和研究人員提供高效的文檔處理和分析工具。
 
-## 如何編輯此代碼？
+## 主要功能
 
-編輯應用程序有幾種方法。
+- **文檔智能分類**: 根據SEC標準自動識別和分類上市公司提交的各類文檔
+- **深度分析能力**: 利用先進的AI技術解析文檔內容，提取關鍵信息
+- **雙重獲取方式**: 支持API直接獲取和本地文檔上傳兩種方式處理文件
+- **多語言支持**: 完整支持中文和英文界面，滿足不同用戶需求
 
-**使用 Lovable**
+## 技術架構
 
-只需訪問 [Lovable 項目](https://lovable.dev/projects/dcf3b57d-3062-4591-8925-df38906d2c74) 並開始提示。
+本項目採用現代前端技術構建:
 
-通過 Lovable 進行的更改將自動提交到此存儲庫。
+- Vite - 高性能的前端構建工具
+- TypeScript - 增強的JavaScript開發體驗
+- React - 用戶界面構建庫
+- Tailwind CSS - 實用優先的CSS框架
+- shadcn/ui - 高質量UI組件庫
 
-**使用您偏好的 IDE**
+## 如何使用
 
-如果您想使用自己的 IDE 在本地工作，可以克隆此存儲庫並推送更改。推送的更改也會反映在 Lovable 中。
+1. 訪問我們的在線平台
+2. 選擇您希望分析的文檔類型
+3. 通過SEC API獲取或上傳本地文檔
+4. 系統將自動進行分析並展示結果
 
-唯一的要求是安裝 Node.js 和 npm - [使用 nvm 安裝](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 開發指南
 
-請按照以下步驟操作：
+### 環境準備
 
-```sh
-# 步驟 1：使用項目的 Git URL 克隆存儲庫
-git clone <YOUR_GIT_URL>
+開發前請確保已安裝以下工具:
+- Node.js (推薦使用最新LTS版本)
+- npm 或 yarn
 
-# 步驟 2：導航到項目目錄
-cd <YOUR_PROJECT_NAME>
+### 本地開發步驟
 
-# 步驟 3：安裝必要的依賴項
-npm i
+```bash
+# 克隆代碼庫
+git clone <項目Git地址>
 
-# 步驟 4：啟動具有自動重新加載和即時預覽的開發服務器
+# 進入項目目錄
+cd secgpt
+
+# 安裝依賴
+npm install
+# 或
+yarn
+
+# 啟動開發服務器
 npm run dev
+# 或
+yarn dev
 ```
 
-**直接在 GitHub 中編輯文件**
+開發服務器啟動後，訪問 http://localhost:5173 即可查看應用。
 
-- 導航到所需的文件
-- 點擊文件視圖右上角的"編輯"按鈕（鉛筆圖標）
-- 進行更改並提交更改
+## 部署
 
-**使用 GitHub Codespaces**
+本項目使用Lovable平台進行部署，訪問[項目頁面](https://lovable.dev/projects/dcf3b57d-3062-4591-8925-df38906d2c74)並點擊「分享 -> 發布」即可完成部署。
 
-- 導航到存儲庫的主頁
-- 點擊右上角附近的"代碼"按鈕（綠色按鈕）
-- 選擇"Codespaces"選項卡
-- 點擊"新建 codespace"以啟動新的 Codespace 環境
-- 直接在 Codespace 中編輯文件，完成後提交並推送更改
+## 自定義域名
 
-## 此項目使用哪些技術？
+您可以將自己的域名連接到本項目:
 
-此項目使用以下技術構建：
+1. 訪問項目設置
+2. 導航至「域名」設置頁面
+3. 按照指引添加您的自定義域名
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 許可證
 
-## 如何部署此項目？
-
-只需打開 [Lovable](https://lovable.dev/projects/dcf3b57d-3062-4591-8925-df38906d2c74) 並點擊分享 -> 發布。
-
-## 我可以將自定義域名連接到我的 Lovable 項目嗎？
-
-是的，可以！
-
-要連接域名，請導航至項目 > 設置 > 域名，然後點擊連接域名。
-
-在此處閱讀更多信息：[設置自定義域名](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
-
----
-
-# Welcome to your Lovable project
-
-## Project info
-
-**URL**: https://lovable.dev/projects/dcf3b57d-3062-4591-8925-df38906d2c74
-
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/dcf3b57d-3062-4591-8925-df38906d2c74) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/dcf3b57d-3062-4591-8925-df38906d2c74) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+版權所有 © 2024 SECGPT。保留所有權利。
