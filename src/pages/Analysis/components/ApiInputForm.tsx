@@ -24,25 +24,22 @@ const ApiInputForm = ({
 
   const renderSecApiHint = () => {
     const secApiUrl = "https://sec-api.io";
-    const hintTemplate = language === "zh" 
-      ? "在{secApiLink}獲取您的SEC API密鑰" 
-      : "Get your SEC API key at {secApiLink}";
+    const hintText = language === "zh" 
+      ? "在" 
+      : "Get your SEC API key at ";
     
-    return hintTemplate.replace('{secApiLink}', secApiUrl).split('{secApiLink}').map((part, index) => 
-      index === 0 ? part : (
-        <>
-          <a 
-            key="sec-api-link" 
-            href={secApiUrl} 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="text-secgpt-accent hover:underline font-semibold"
-          >
-            {secApiUrl}
-          </a>
-          {part}
-        </>
-      )
+    return (
+      <p className="text-xs text-muted-foreground mt-1">
+        {hintText}
+        <a 
+          href={secApiUrl} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="text-secgpt-accent hover:underline font-semibold"
+        >
+          {secApiUrl}
+        </a>
+      </p>
     );
   };
 
@@ -97,9 +94,7 @@ const ApiInputForm = ({
             onChange={handleChange}
             className="transition-all focus:ring-2 focus:ring-secgpt-accent focus:border-transparent"
           />
-          <p className="text-xs text-muted-foreground mt-1">
-            {renderSecApiHint()}
-          </p>
+          {renderSecApiHint()}
         </div>
         
         {/* Stock & Document Section */}
