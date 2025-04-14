@@ -56,7 +56,7 @@ const FileUploadForm = ({
           <div className="space-y-2">
             <Label htmlFor="baseUrl_upload" className="flex items-center gap-2">
               <Globe className="h-4 w-4 text-secgpt-accent" />
-              {t("analysis.baseurl.label")} (可選)
+              {t("analysis.baseurl.label")} (Optional)
             </Label>
             <Input
               id="baseUrl_upload"
@@ -73,7 +73,7 @@ const FileUploadForm = ({
         <div className="space-y-2">
           <Label htmlFor="fileUpload" className="flex items-center gap-2">
             <Upload className="h-4 w-4 text-secgpt-accent" />
-            上傳 SEC 文件
+            Upload SEC Document
           </Label>
           <div className="flex flex-col items-center justify-center gap-4 p-8 border-2 border-dashed border-muted-foreground/30 rounded-lg bg-background/50">
             <input
@@ -88,16 +88,16 @@ const FileUploadForm = ({
               <Upload className="h-10 w-10 text-muted-foreground" />
               {formData.file ? (
                 <>
-                  <p className="font-medium">已選擇文件：{formData.file.name}</p>
+                  <p className="font-medium">File Selected: {formData.file.name}</p>
                   <p className="text-sm text-muted-foreground">
                     {(formData.file.size / 1024 / 1024).toFixed(2)} MB
                   </p>
                 </>
               ) : (
                 <>
-                  <p className="font-medium">拖放文件到此處或點擊上傳</p>
+                  <p className="font-medium">Drag and drop files here or click to upload</p>
                   <p className="text-sm text-muted-foreground">
-                    支持 PDF、DOC、DOCX、TXT、HTML、XBRL 和 XML 文件
+                    Supports PDF, DOC, DOCX, TXT, HTML, XBRL, and XML files
                   </p>
                 </>
               )}
@@ -108,7 +108,7 @@ const FileUploadForm = ({
               className="mt-2"
               onClick={handleFileUploadClick}
             >
-              選擇文件
+              Choose File
             </Button>
           </div>
         </div>

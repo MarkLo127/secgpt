@@ -59,8 +59,8 @@ const AnalysisPage = () => {
       // API validation
       if (!formData.openaiKey) {
         toast({
-          title: "錯誤",
-          description: "需要 OpenAI API 金鑰",
+          title: "Error",
+          description: "OpenAI API key is required",
           variant: "destructive",
         });
         return;
@@ -68,8 +68,8 @@ const AnalysisPage = () => {
       
       if (!formData.secApiKey) {
         toast({
-          title: "錯誤",
-          description: "需要 SEC API 金鑰",
+          title: "Error",
+          description: "SEC API key is required",
           variant: "destructive",
         });
         return;
@@ -77,8 +77,8 @@ const AnalysisPage = () => {
       
       if (!formData.ticker) {
         toast({
-          title: "錯誤",
-          description: "需要股票代號",
+          title: "Error",
+          description: "Stock ticker is required",
           variant: "destructive",
         });
         return;
@@ -86,8 +86,8 @@ const AnalysisPage = () => {
       
       if (!formData.documentType) {
         toast({
-          title: "錯誤",
-          description: "需要文件類型",
+          title: "Error",
+          description: "Document type is required",
           variant: "destructive",
         });
         return;
@@ -96,8 +96,8 @@ const AnalysisPage = () => {
       // File upload validation
       if (!formData.openaiKey) {
         toast({
-          title: "錯誤",
-          description: "需要 OpenAI API 金鑰",
+          title: "Error",
+          description: "OpenAI API key is required",
           variant: "destructive",
         });
         return;
@@ -105,8 +105,8 @@ const AnalysisPage = () => {
       
       if (!formData.file) {
         toast({
-          title: "錯誤",
-          description: "請上傳一個文件",
+          title: "Error",
+          description: "Please upload a file",
           variant: "destructive",
         });
         return;
@@ -114,8 +114,8 @@ const AnalysisPage = () => {
       
       if (!formData.documentType) {
         toast({
-          title: "錯誤",
-          description: "需要文件類型",
+          title: "Error",
+          description: "Document type is required",
           variant: "destructive",
         });
         return;
@@ -130,13 +130,11 @@ const AnalysisPage = () => {
     
     // Handle file upload if needed
     if (activeTab === "upload" && formData.file) {
-      // In a real application, you would upload the file to your server here
       console.log("Uploading file:", formData.file.name);
       
-      // For demo purposes, just show a success message
       toast({
-        title: "成功",
-        description: `文件 ${formData.file.name} 已上傳`,
+        title: "Success",
+        description: `File ${formData.file.name} uploaded`,
       });
     }
     
@@ -175,11 +173,11 @@ const AnalysisPage = () => {
                 <TabsList className="grid w-full grid-cols-2 mb-6">
                   <TabsTrigger value="api" className="flex items-center gap-2">
                     <Globe className="h-4 w-4" />
-                    API 獲取文件
+                    Fetch via API
                   </TabsTrigger>
                   <TabsTrigger value="upload" className="flex items-center gap-2">
                     <Upload className="h-4 w-4" />
-                    上傳文件
+                    Upload Document
                   </TabsTrigger>
                 </TabsList>
                 
@@ -216,7 +214,7 @@ const AnalysisPage = () => {
           </Card>
           
           <div className="mt-6 text-center text-sm text-muted-foreground animate-fade-in">
-            <p>所有 API 密鑰都安全地存儲在您的瀏覽器的會話存儲中，永遠不會發送到我們的服務器。</p>
+            <p>All API keys are securely stored in your browser's session storage and will never be sent to our servers.</p>
           </div>
         </div>
       </main>
