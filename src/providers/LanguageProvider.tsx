@@ -1,4 +1,3 @@
-
 import { createContext, useContext, useEffect, useState } from "react";
 
 type Language = "en" | "zh";
@@ -155,7 +154,6 @@ export function LanguageProvider({
     () => (localStorage.getItem("language") as Language) || defaultLanguage
   );
 
-  // Translator function
   const t = (key: string): string => {
     return translations[language][key] || key;
   };

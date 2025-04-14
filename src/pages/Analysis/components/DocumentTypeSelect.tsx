@@ -36,40 +36,40 @@ const DocumentTypeSelect = ({ value, onChange, id = "documentType" }: DocumentTy
           <SelectGroup>
             <SelectLabel>{t("analysis.document.category1")}</SelectLabel>
             <SelectItem value="10-K">
-              {language === "zh" ? "10-K (年度报告)" : "10-K (Annual Report)"}
+              {language === "zh" ? "10-K (年度報告)" : "10-K (Annual Report)"}
             </SelectItem>
             <SelectItem value="10-Q">
-              {language === "zh" ? "10-Q (季度报告)" : "10-Q (Quarterly Report)"}
+              {language === "zh" ? "10-Q (季度報告)" : "10-Q (Quarterly Report)"}
             </SelectItem>
             <SelectItem value="8-K">
-              {language === "zh" ? "8-K (当前报告)" : "8-K (Current Report)"}
+              {language === "zh" ? "8-K (當前報告)" : "8-K (Current Report)"}
             </SelectItem>
             <SelectItem value="Form-3">
-              {language === "zh" ? "表格3 (实益所有权初始声明)" : "Form 3 (Initial Statement of Beneficial Ownership)"}
+              {language === "zh" ? "表格3 (實益所有權初始聲明)" : "Form 3 (Initial Statement of Beneficial Ownership)"}
             </SelectItem>
             <SelectItem value="Form-4">
-              {language === "zh" ? "表格4 (实益所有权变更)" : "Form 4 (Changes in Beneficial Ownership)"}
+              {language === "zh" ? "表格4 (實益所有權變更)" : "Form 4 (Changes in Beneficial Ownership)"}
             </SelectItem>
           </SelectGroup>
           <SelectGroup>
             <SelectLabel>{t("analysis.document.category2")}</SelectLabel>
             <SelectItem value="S-1">
-              {language === "zh" ? "S-1 (IPO注册)" : "S-1 (IPO Registration)"}
+              {language === "zh" ? "S-1 (IPO註冊)" : "S-1 (IPO Registration)"}
             </SelectItem>
             <SelectItem value="S-3">
-              {language === "zh" ? "S-3 (简化注册)" : "S-3 (Simplified Registration)"}
+              {language === "zh" ? "S-3 (簡化註冊)" : "S-3 (Simplified Registration)"}
             </SelectItem>
             <SelectItem value="S-4">
-              {language === "zh" ? "S-4 (合并/收购注册)" : "S-4 (Merger/Acquisition Registration)"}
+              {language === "zh" ? "S-4 (合併/收購註冊)" : "S-4 (Merger/Acquisition Registration)"}
             </SelectItem>
             <SelectItem value="SC-13D">
-              {language === "zh" ? "SC 13D (实益所有权报告)" : "SC 13D (Beneficial Ownership Report)"}
+              {language === "zh" ? "SC 13D (實益所有權報告)" : "SC 13D (Beneficial Ownership Report)"}
             </SelectItem>
           </SelectGroup>
           <SelectGroup>
             <SelectLabel>{t("analysis.document.category3")}</SelectLabel>
             <SelectItem value="DEF-14A">
-              {language === "zh" ? "DEF 14A (代理声明)" : "DEF 14A (Proxy Statement)"}
+              {language === "zh" ? "DEF 14A (代理聲明)" : "DEF 14A (Proxy Statement)"}
             </SelectItem>
             <SelectItem value="Form-25">
               {language === "zh" ? "表格25 (退市通知)" : "Form 25 (Notification of Delisting)"}

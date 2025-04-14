@@ -56,7 +56,7 @@ const FileUploadForm = ({
           <div className="space-y-2">
             <Label htmlFor="baseUrl_upload" className="flex items-center gap-2">
               <Globe className="h-4 w-4 text-secgpt-accent" />
-              {language === "zh" ? t("analysis.baseurl.label") + " (可选)" : t("analysis.baseurl.label") + " (Optional)"}
+              {language === "zh" ? t("analysis.baseurl.label") + " (可選)" : t("analysis.baseurl.label") + " (Optional)"}
             </Label>
             <Input
               id="baseUrl_upload"
@@ -73,7 +73,7 @@ const FileUploadForm = ({
         <div className="space-y-2">
           <Label htmlFor="fileUpload" className="flex items-center gap-2">
             <Upload className="h-4 w-4 text-secgpt-accent" />
-            {language === "zh" ? "上传SEC文档" : "Upload SEC Document"}
+            {language === "zh" ? "上傳SEC文檔" : "Upload SEC Document"}
           </Label>
           <div className="flex flex-col items-center justify-center gap-4 p-8 border-2 border-dashed border-muted-foreground/30 rounded-lg bg-background/50">
             <input
@@ -89,7 +89,7 @@ const FileUploadForm = ({
               {formData.file ? (
                 <>
                   <p className="font-medium">
-                    {language === "zh" ? "已选择文件：" : "File Selected: "}{formData.file.name}
+                    {language === "zh" ? "已選擇文件：" : "File Selected: "}{formData.file.name}
                   </p>
                   <p className="text-sm text-muted-foreground">
                     {(formData.file.size / 1024 / 1024).toFixed(2)} MB
@@ -99,7 +99,7 @@ const FileUploadForm = ({
                 <>
                   <p className="font-medium">
                     {language === "zh" 
-                      ? "将文件拖放到此处或点击上传" 
+                      ? "將文件拖放到此處或點擊上傳" 
                       : "Drag and drop files here or click to upload"}
                   </p>
                   <p className="text-sm text-muted-foreground">
@@ -116,7 +116,7 @@ const FileUploadForm = ({
               className="mt-2"
               onClick={handleFileUploadClick}
             >
-              {language === "zh" ? "选择文件" : "Choose File"}
+              {language === "zh" ? "選擇文件" : "Choose File"}
             </Button>
           </div>
         </div>
