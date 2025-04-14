@@ -41,7 +41,7 @@ SECGPT是一個專門針對上市公司證券文檔進行智能分析的平台�
 
 ```bash
 # 克隆代碼庫
-git clone <項目Git地址>
+git clone https://github.com/MarkLo127/secgpt.git
 
 # 進入項目目錄
 cd secgpt
@@ -49,12 +49,12 @@ cd secgpt
 # 安裝依賴
 npm install
 # 或
-yarn
+pnpm install
 
 # 啟動開發服務器
 npm run dev
 # 或
-yarn dev
+pnpm run dev
 ```
 
 開發服務器啟動後，訪問 http://localhost:5173 即可查看應用。
