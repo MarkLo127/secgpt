@@ -33,7 +33,7 @@ const AnalysisCard = ({
   } = useLanguage();
   return <Card className="glass-card shadow-lg border-opacity-50 animate-slide-in">
       <CardHeader>
-        <CardTitle className="flex items-center gap-2 text-base text-center">
+        <CardTitle className="flex items-center gap-2 text-base font-normal text-center">
           <FileText className="h-5 w-5 text-secgpt-accent" />
           {t("analysis.title")}
         </CardTitle>
