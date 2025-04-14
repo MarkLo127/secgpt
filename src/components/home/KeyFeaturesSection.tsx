@@ -1,17 +1,19 @@
-
 import { FileText, Search, BarChart, AreaChart, Building, CheckCircle } from "lucide-react";
 import { Card, CardHeader, CardContent, CardFooter, CardTitle } from "@/components/ui/card";
+import { useLanguage } from "@/providers/LanguageProvider";
 
 const KeyFeaturesSection = () => {
+  const { t } = useLanguage();
+  
   return (
     <section className="py-16 md:py-24 bg-background/50">
       <div className="container px-4 md:px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold tech-text-gradient mb-4">
-            Key Features
+            {t("home.features")}
           </h2>
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-            Our advanced features make SEC document analysis simple yet powerful
+            {t("home.description")}
           </p>
         </div>
         
@@ -22,15 +24,15 @@ const KeyFeaturesSection = () => {
               <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-2">
                 <FileText className="h-6 w-6 text-secgpt-blue" />
               </div>
-              <CardTitle className="text-xl">Comprehensive Document Analysis</CardTitle>
+              <CardTitle className="text-xl">{t("home.feature1.title")}</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground">
-                Analyze various SEC documents including 10-K, 10-Q, 8-K, and more with precision.
+                {t("home.feature1.description")}
               </p>
             </CardContent>
             <CardFooter>
-              <p className="text-sm text-secgpt-blue">Supports multiple SEC document formats</p>
+              <p className="text-sm text-secgpt-blue">{t("analysis.document.category1")}</p>
             </CardFooter>
           </Card>
 
@@ -40,15 +42,15 @@ const KeyFeaturesSection = () => {
               <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-2">
                 <Search className="h-6 w-6 text-secgpt-blue" />
               </div>
-              <CardTitle className="text-xl">Natural Language Queries</CardTitle>
+              <CardTitle className="text-xl">{t("home.feature2.title")}</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground">
-                Ask complex questions about financial filings and get accurate, contextual responses.
+                {t("home.feature2.description")}
               </p>
             </CardContent>
             <CardFooter>
-              <p className="text-sm text-secgpt-blue">Ask questions in natural language, get professional financial analysis</p>
+              <p className="text-sm text-secgpt-blue">{t("chat.placeholder")}</p>
             </CardFooter>
           </Card>
 
@@ -58,15 +60,15 @@ const KeyFeaturesSection = () => {
               <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-2">
                 <BarChart className="h-6 w-6 text-secgpt-blue" />
               </div>
-              <CardTitle className="text-xl">Advanced Data Extraction</CardTitle>
+              <CardTitle className="text-xl">{t("home.feature3.title")}</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground">
-                Extract specific financial data points and insights from complex documents quickly.
+                {t("home.feature3.description")}
               </p>
             </CardContent>
             <CardFooter>
-              <p className="text-sm text-secgpt-blue">Accurately extract key financial data and trends</p>
+              <p className="text-sm text-secgpt-blue">{t("analysis.document.category3")}</p>
             </CardFooter>
           </Card>
 

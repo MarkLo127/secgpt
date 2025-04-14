@@ -1,17 +1,20 @@
 
 import { Upload, Cpu, Layers } from "lucide-react";
+import { useLanguage } from "@/providers/LanguageProvider";
 
 const HowItWorksSection = () => {
+  const { t } = useLanguage();
+  
   return (
     <section className="py-20 md:py-24 relative overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background via-background/70 to-background"></div>
       <div className="container px-4 md:px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold tech-text-gradient mb-4">
-            How SECGPT Works
+            {t("home.how_it_works.title")}
           </h2>
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-            Three simple steps to quickly extract key information from SEC documents
+            {t("home.description")}
           </p>
         </div>
         
@@ -25,9 +28,9 @@ const HowItWorksSection = () => {
               <span className="absolute -top-2 -right-2 h-6 w-6 rounded-full bg-secgpt-blue text-white flex items-center justify-center text-sm font-bold">1</span>
               <Upload className="h-8 w-8 text-secgpt-blue" />
             </div>
-            <h3 className="text-xl font-semibold">Upload Documents</h3>
-            <p className="text-muted-foreground">Easily upload SEC documents from various sources and formats.</p>
-            <p className="text-sm text-secgpt-blue">Supports PDF, DOC, HTML and more</p>
+            <h3 className="text-xl font-semibold">{t("home.how_it_works.step1.title")}</h3>
+            <p className="text-muted-foreground">{t("home.how_it_works.step1.description")}</p>
+            <p className="text-sm text-secgpt-blue">{t("analysis.upload.supports")}</p>
           </div>
 
           {/* Step 2 */}
@@ -36,9 +39,9 @@ const HowItWorksSection = () => {
               <span className="absolute -top-2 -right-2 h-6 w-6 rounded-full bg-secgpt-blue text-white flex items-center justify-center text-sm font-bold">2</span>
               <Cpu className="h-8 w-8 text-secgpt-blue" />
             </div>
-            <h3 className="text-xl font-semibold">AI Processing</h3>
-            <p className="text-muted-foreground">Our advanced AI agent processes and comprehends complex financial text.</p>
-            <p className="text-sm text-secgpt-blue">Powered by state-of-the-art language models</p>
+            <h3 className="text-xl font-semibold">{t("home.how_it_works.step2.title")}</h3>
+            <p className="text-muted-foreground">{t("home.how_it_works.step2.description")}</p>
+            <p className="text-sm text-secgpt-blue">{t("home.features")}</p>
           </div>
 
           {/* Step 3 */}
@@ -47,9 +50,9 @@ const HowItWorksSection = () => {
               <span className="absolute -top-2 -right-2 h-6 w-6 rounded-full bg-secgpt-blue text-white flex items-center justify-center text-sm font-bold">3</span>
               <Layers className="h-8 w-8 text-secgpt-blue" />
             </div>
-            <h3 className="text-xl font-semibold">Instant Insights</h3>
-            <p className="text-muted-foreground">Receive clear, concise summaries and actionable intelligence.</p>
-            <p className="text-sm text-secgpt-blue">Visualized data and natural language explanation</p>
+            <h3 className="text-xl font-semibold">{t("home.how_it_works.step3.title")}</h3>
+            <p className="text-muted-foreground">{t("home.how_it_works.step3.description")}</p>
+            <p className="text-sm text-secgpt-blue">{t("home.features")}</p>
           </div>
         </div>
       </div>

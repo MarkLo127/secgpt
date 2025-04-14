@@ -1,16 +1,19 @@
 
 import { Users, Building, CheckCircle } from "lucide-react";
+import { useLanguage } from "@/providers/LanguageProvider";
 
 const UseCasesSection = () => {
+  const { t } = useLanguage();
+  
   return (
     <section className="py-16 bg-gradient-to-b from-background to-secgpt-blue/5">
       <div className="container px-4 md:px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold tech-text-gradient mb-4">
-            Use Cases
+            {t("home.features")}
           </h2>
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-            SECGPT provides powerful document analysis support for various users
+            {t("home.description")}
           </p>
         </div>
         
@@ -21,22 +24,22 @@ const UseCasesSection = () => {
                 <Users className="h-6 w-6 text-secgpt-blue" />
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-3">Investors and Analysts</h3>
+                <h3 className="text-xl font-semibold mb-3">{t("home.feature1.title")}</h3>
                 <p className="text-muted-foreground mb-4">
-                  Quickly analyze financial statements of listed companies, identify investment opportunities and risks, save research time, and make more informed investment decisions.
+                  {t("home.feature1.description")}
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2">
                     <CheckCircle className="h-5 w-5 text-secgpt-success" />
-                    <span>Rapid financial health assessment</span>
+                    <span>{t("home.feature1.title")}</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle className="h-5 w-5 text-secgpt-success" />
-                    <span>Key risk factor identification</span>
+                    <span>{t("home.feature2.title")}</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle className="h-5 w-5 text-secgpt-success" />
-                    <span>Management discussion and analysis summary</span>
+                    <span>{t("home.feature3.title")}</span>
                   </li>
                 </ul>
               </div>
@@ -49,22 +52,22 @@ const UseCasesSection = () => {
                 <Building className="h-6 w-6 text-secgpt-blue" />
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-3">Corporate and Legal Professionals</h3>
+                <h3 className="text-xl font-semibold mb-3">{t("home.feature2.title")}</h3>
                 <p className="text-muted-foreground mb-4">
-                  Assist companies in reviewing competitors' disclosure documents, understanding industry trends, while helping legal professionals conduct due diligence and compliance reviews.
+                  {t("home.feature2.description")}
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2">
                     <CheckCircle className="h-5 w-5 text-secgpt-success" />
-                    <span>Competitive intelligence gathering</span>
+                    <span>{t("home.feature1.title")}</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle className="h-5 w-5 text-secgpt-success" />
-                    <span>Compliance review automation</span>
+                    <span>{t("home.feature2.title")}</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle className="h-5 w-5 text-secgpt-success" />
-                    <span>Industry standards and best practices comparison</span>
+                    <span>{t("home.feature3.title")}</span>
                   </li>
                 </ul>
               </div>
