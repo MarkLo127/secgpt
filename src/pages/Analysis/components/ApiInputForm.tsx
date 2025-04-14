@@ -83,7 +83,7 @@ const ApiInputForm = ({
             className="transition-all focus:ring-2 focus:ring-secgpt-accent focus:border-transparent"
           />
           <p className="text-xs text-muted-foreground mt-1">
-            {t("analysis.secapi.hint")} <a href="https://sec-api.io" target="_blank" rel="noopener noreferrer" className="text-secgpt-accent hover:underline">https://sec-api.io</a>
+            {t("analysis.secapi.hint")}
           </p>
         </div>
         
