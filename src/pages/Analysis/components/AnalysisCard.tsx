@@ -56,7 +56,7 @@ const AnalysisCard = ({
           <TabsList className="grid w-full grid-cols-2 mb-6">
             <TabsTrigger value="api" className="flex items-center gap-2">
               <Globe className="h-4 w-4" />
-              {language === "zh" ? "通過API獲取" : "Fetch via API"}
+              {language === "zh" ? "通過API獲取" : "Fetch API"}
             </TabsTrigger>
             <TabsTrigger value="upload" className="flex items-center gap-2">
               <Upload className="h-4 w-4" />
