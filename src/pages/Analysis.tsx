@@ -134,6 +134,15 @@ const Analysis = () => {
         });
         return;
       }
+      
+      if (!formData.documentType) {
+        toast({
+          title: "錯誤",
+          description: "需要文件類型",
+          variant: "destructive",
+        });
+        return;
+      }
     }
     
     // Store form data in session storage (never in local storage for API keys)
@@ -249,7 +258,7 @@ const Analysis = () => {
                           className="transition-all focus:ring-2 focus:ring-secgpt-accent focus:border-transparent"
                         />
                         <p className="text-xs text-muted-foreground mt-1">
-                          {t("analysis.secapi.hint")}
+                          {t("analysis.secapi.hint")} <a href="https://sec-api.io" target="_blank" rel="noopener noreferrer" className="text-secgpt-accent hover:underline">https://sec-api.io</a>
                         </p>
                       </div>
                       
@@ -312,20 +321,37 @@ const Analysis = () => {
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="space-y-4">
                       {/* API Key Section for upload */}
-                      <div className="space-y-2">
-                        <Label htmlFor="openaiKey_upload" className="flex items-center gap-2">
-                          <Key className="h-4 w-4 text-secgpt-accent" />
-                          {t("analysis.openai.label")}
-                        </Label>
-                        <Input
-                          id="openaiKey_upload"
-                          name="openaiKey"
-                          type="password"
-                          placeholder={t("analysis.openai.placeholder")}
-                          value={formData.openaiKey}
-                          onChange={handleChange}
-                          className="transition-all focus:ring-2 focus:ring-secgpt-accent focus:border-transparent"
-                        />
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="space-y-2">
+                          <Label htmlFor="openaiKey_upload" className="flex items-center gap-2">
+                            <Key className="h-4 w-4 text-secgpt-accent" />
+                            {t("analysis.openai.label")}
+                          </Label>
+                          <Input
+                            id="openaiKey_upload"
+                            name="openaiKey"
+                            type="password"
+                            placeholder={t("analysis.openai.placeholder")}
+                            value={formData.openaiKey}
+                            onChange={handleChange}
+                            className="transition-all focus:ring-2 focus:ring-secgpt-accent focus:border-transparent"
+                          />
+                        </div>
+                        
+                        <div className="space-y-2">
+                          <Label htmlFor="baseUrl_upload" className="flex items-center gap-2">
+                            <Globe className="h-4 w-4 text-secgpt-accent" />
+                            {t("analysis.baseurl.label")} (可選)
+                          </Label>
+                          <Input
+                            id="baseUrl_upload"
+                            name="baseUrl"
+                            placeholder={t("analysis.baseurl.placeholder")}
+                            value={formData.baseUrl}
+                            onChange={handleChange}
+                            className="transition-all focus:ring-2 focus:ring-secgpt-accent focus:border-transparent"
+                          />
+                        </div>
                       </div>
                       
                       {/* File Upload Section */}
@@ -370,6 +396,41 @@ const Analysis = () => {
                             選擇文件
                           </Button>
                         </div>
+                      </div>
+                      
+                      {/* Document Type Selection for upload */}
+                      <div className="space-y-2">
+                        <Label htmlFor="documentType_upload" className="flex items-center gap-2">
+                          <FileText className="h-4 w-4 text-secgpt-accent" />
+                          {t("analysis.document.label")}
+                        </Label>
+                        <Select onValueChange={handleDocTypeChange}>
+                          <SelectTrigger className="transition-all focus:ring-2 focus:ring-secgpt-accent focus:border-transparent">
+                            <SelectValue placeholder={t("analysis.document.placeholder")} />
+                          </SelectTrigger>
+                          <SelectContent>
+                            <SelectGroup>
+                              <SelectLabel>{t("analysis.document.category1")}</SelectLabel>
+                              <SelectItem value="10-K">10-K (Annual Report)</SelectItem>
+                              <SelectItem value="10-Q">10-Q (Quarterly Report)</SelectItem>
+                              <SelectItem value="8-K">8-K (Current Report)</SelectItem>
+                              <SelectItem value="Form-3">Form 3 (Initial Statement of Beneficial Ownership)</SelectItem>
+                              <SelectItem value="Form-4">Form 4 (Changes in Beneficial Ownership)</SelectItem>
+                            </SelectGroup>
+                            <SelectGroup>
+                              <SelectLabel>{t("analysis.document.category2")}</SelectLabel>
+                              <SelectItem value="S-1">S-1 (IPO Registration)</SelectItem>
+                              <SelectItem value="S-3">S-3 (Simplified Registration)</SelectItem>
+                              <SelectItem value="S-4">S-4 (Merger/Acquisition Registration)</SelectItem>
+                              <SelectItem value="SC-13D">SC 13D (Beneficial Ownership Report)</SelectItem>
+                            </SelectGroup>
+                            <SelectGroup>
+                              <SelectLabel>{t("analysis.document.category3")}</SelectLabel>
+                              <SelectItem value="DEF-14A">DEF 14A (Proxy Statement)</SelectItem>
+                              <SelectItem value="Form-25">Form 25 (Notification of Delisting)</SelectItem>
+                            </SelectGroup>
+                          </SelectContent>
+                        </Select>
                       </div>
                     </div>
                   </form>
