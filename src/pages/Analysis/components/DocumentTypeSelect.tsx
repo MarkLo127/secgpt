@@ -33,115 +33,221 @@ const DocumentTypeSelect = ({ value, onChange, id = "documentType" }: DocumentTy
           <SelectValue placeholder={t("analysis.document.placeholder")} />
         </SelectTrigger>
         <SelectContent className="max-h-80">
-          {/* I. Periodic Reports and Internal Disclosures */}
+          {/* 1. Registration and Issuance Filings */}
           <SelectGroup>
-            <SelectLabel>{language === "zh" ? "一、定期報告及內部申報文件" : "I. Periodic Reports and Internal Disclosures"}</SelectLabel>
-            
-            {/* 1. U.S. Public Company Periodic Reports (Series 10) */}
-            <SelectItem value="10-K">
-              {language === "zh" ? "10-K (年度報告)" : "10-K (Annual Report)"}
-            </SelectItem>
-            <SelectItem value="10-K/A">
-              {language === "zh" ? "10-K/A (年度報告修正)" : "10-K/A (Annual Report Amendment)"}
-            </SelectItem>
-            <SelectItem value="10-KSB">
-              {language === "zh" ? "10-KSB (小型企業年度報告)" : "10-KSB (Small Business Annual Report)"}
-            </SelectItem>
-            <SelectItem value="10-Q">
-              {language === "zh" ? "10-Q (季度報告)" : "10-Q (Quarterly Report)"}
-            </SelectItem>
-            <SelectItem value="10-Q/A">
-              {language === "zh" ? "10-Q/A (季度報告修正)" : "10-Q/A (Quarterly Report Amendment)"}
-            </SelectItem>
-            
-            {/* 2. Insider and Ownership Disclosures */}
-            <SelectItem value="Form-3">
-              {language === "zh" ? "Form 3 (首次受益所有權申報)" : "Form 3 (Initial Statement of Beneficial Ownership)"}
-            </SelectItem>
-            <SelectItem value="Form-4">
-              {language === "zh" ? "Form 4 (內部人持股變動報告)" : "Form 4 (Changes in Beneficial Ownership)"}
-            </SelectItem>
-            <SelectItem value="Form-5">
-              {language === "zh" ? "Form 5 (年度內部持股報告)" : "Form 5 (Annual Statement of Beneficial Ownership)"}
-            </SelectItem>
-            
-            {/* 3. Employee Stock Ownership Plan Reports */}
-            <SelectItem value="11-K">
-              {language === "zh" ? "11-K (員工持股計劃報告)" : "11-K (Employee Stock Ownership Plan Report)"}
-            </SelectItem>
-          </SelectGroup>
-          
-          {/* II. Current Event Announcements and Prompt Reports */}
-          <SelectGroup>
-            <SelectLabel>{language === "zh" ? "二、重大事件公告及即時報告" : "II. Current Event Announcements and Prompt Reports"}</SelectLabel>
-            <SelectItem value="8-K">
-              {language === "zh" ? "8-K (重大事件公告)" : "8-K (Current Report)"}
-            </SelectItem>
-            <SelectItem value="8-K/A">
-              {language === "zh" ? "8-K/A (重大事件公告修正)" : "8-K/A (Current Report Amendment)"}
-            </SelectItem>
-          </SelectGroup>
-          
-          {/* III. IPO and Securities Issuance Documents */}
-          <SelectGroup>
-            <SelectLabel>{language === "zh" ? "三、IPO及證券發行文件" : "III. IPO and Securities Issuance Documents"}</SelectLabel>
-            
-            {/* 1. U.S. Company Initial Public Offering */}
+            <SelectLabel>
+              {language === "zh" 
+                ? "1. 登記與發行文件" 
+                : "1. Registration and Issuance Filings"}
+            </SelectLabel>
             <SelectItem value="S-1">
-              {language === "zh" ? "S-1 (IPO註冊聲明)" : "S-1 (IPO Registration Statement)"}
+              {language === "zh" 
+                ? "Form S-1 (IPO註冊聲明)" 
+                : "Form S-1 (Initial Registration Statement for IPO)"}
             </SelectItem>
             <SelectItem value="S-3">
-              {language === "zh" ? "S-3 (簡化註冊聲明)" : "S-3 (Simplified Registration Statement)"}
+              {language === "zh" 
+                ? "Form S-3 (簡化註冊聲明)" 
+                : "Form S-3 (Simplified Registration Statement)"}
             </SelectItem>
             <SelectItem value="S-4">
-              {language === "zh" ? "S-4 (合併/收購註冊)" : "S-4 (Business Combinations Registration)"}
+              {language === "zh" 
+                ? "Form S-4 (併購交易註冊聲明)" 
+                : "Form S-4 (Business Combinations Registration)"}
             </SelectItem>
             <SelectItem value="S-8">
-              {language === "zh" ? "S-8 (員工福利計劃)" : "S-8 (Employee Benefit Plan)"}
+              {language === "zh" 
+                ? "Form S-8 (員工福利計劃)" 
+                : "Form S-8 (Employee Benefit Plans)"}
             </SelectItem>
-            
-            {/* 3. Acquisition and Merger-Related Documents */}
-            <SelectItem value="SC-13D">
-              {language === "zh" ? "SC 13D (大額股份收購聲明)" : "SC 13D (Beneficial Ownership Report)"}
+            <SelectItem value="S-11">
+              {language === "zh" 
+                ? "Form S-11 (房地產投資信託註冊)" 
+                : "Form S-11 (REIT Registration)"}
             </SelectItem>
-            <SelectItem value="SC-13G">
-              {language === "zh" ? "SC 13G (簡化受益所有權申報)" : "SC 13G (Simplified Beneficial Ownership Report)"}
+            <SelectItem value="F-1">
+              {language === "zh" 
+                ? "Form F-1 (外國發行人初次註冊)" 
+                : "Form F-1 (Foreign Private Issuer Initial Registration)"}
             </SelectItem>
-            <SelectItem value="SC-14D9">
-              {language === "zh" ? "SC 14D9 (收購相關溝通文件)" : "SC 14D9 (Tender Offer Communication)"}
+            <SelectItem value="F-3">
+              {language === "zh" 
+                ? "Form F-3 (外國發行人簡化註冊)" 
+                : "Form F-3 (Foreign Issuer Simplified Registration)"}
             </SelectItem>
           </SelectGroup>
           
-          {/* IV. Foreign Issuer Documents */}
+          {/* 2. Periodic Report Filings */}
           <SelectGroup>
-            <SelectLabel>{language === "zh" ? "四、外國發行人文件" : "IV. Foreign Issuer Documents"}</SelectLabel>
+            <SelectLabel>
+              {language === "zh" 
+                ? "2. 定期報告文件" 
+                : "2. Periodic Report Filings"}
+            </SelectLabel>
+            <SelectItem value="10-K">
+              {language === "zh" 
+                ? "Form 10-K (年度報告)" 
+                : "Form 10-K (Annual Report)"}
+            </SelectItem>
+            <SelectItem value="10-K/A">
+              {language === "zh" 
+                ? "Form 10-K/A (年度報告修正)" 
+                : "Form 10-K/A (Annual Report Amendment)"}
+            </SelectItem>
+            <SelectItem value="10-Q">
+              {language === "zh" 
+                ? "Form 10-Q (季度報告)" 
+                : "Form 10-Q (Quarterly Report)"}
+            </SelectItem>
+            <SelectItem value="10-Q/A">
+              {language === "zh" 
+                ? "Form 10-Q/A (季度報告修正)" 
+                : "Form 10-Q/A (Quarterly Report Amendment)"}
+            </SelectItem>
             <SelectItem value="20-F">
-              {language === "zh" ? "20-F (外國發行人年度報告)" : "20-F (Foreign Issuer Annual Report)"}
+              {language === "zh" 
+                ? "Form 20-F (外國發行人年度報告)" 
+                : "Form 20-F (Foreign Issuer Annual Report)"}
+            </SelectItem>
+            <SelectItem value="40-F">
+              {language === "zh" 
+                ? "Form 40-F (加拿大公司年度報告)" 
+                : "Form 40-F (Canadian Company Annual Report)"}
+            </SelectItem>
+          </SelectGroup>
+          
+          {/* 3. Current (Event) Reports */}
+          <SelectGroup>
+            <SelectLabel>
+              {language === "zh" 
+                ? "3. 即時報告文件" 
+                : "3. Current (Event) Reports"}
+            </SelectLabel>
+            <SelectItem value="8-K">
+              {language === "zh" 
+                ? "Form 8-K (重大事件即時報告)" 
+                : "Form 8-K (Current Report)"}
+            </SelectItem>
+            <SelectItem value="8-K/A">
+              {language === "zh" 
+                ? "Form 8-K/A (重大事件報告修正)" 
+                : "Form 8-K/A (Current Report Amendment)"}
             </SelectItem>
             <SelectItem value="6-K">
-              {language === "zh" ? "6-K (外國發行人臨時報告)" : "6-K (Foreign Issuer Current Report)"}
+              {language === "zh" 
+                ? "Form 6-K (外國發行人即時報告)" 
+                : "Form 6-K (Foreign Issuer Current Report)"}
             </SelectItem>
           </SelectGroup>
           
-          {/* V. Regulation A Series */}
+          {/* 4. Insider Holdings and Trading Filings */}
           <SelectGroup>
-            <SelectLabel>{language === "zh" ? "五、Regulation A系列" : "V. Regulation A Series"}</SelectLabel>
-            <SelectItem value="Form-1-A">
-              {language === "zh" ? "Form 1-A (小規模公開發行申請)" : "Form 1-A (Offering Statement)"}
+            <SelectLabel>
+              {language === "zh" 
+                ? "4. 內部人持股及交易文件" 
+                : "4. Insider Holdings and Trading Filings"}
+            </SelectLabel>
+            <SelectItem value="Form-3">
+              {language === "zh" 
+                ? "Form 3 (首次披露內部人持股)" 
+                : "Form 3 (Initial Statement of Beneficial Ownership)"}
             </SelectItem>
-            <SelectItem value="Form-1-K">
-              {language === "zh" ? "Form 1-K (Regulation A年度報告)" : "Form 1-K (Regulation A Annual Report)"}
+            <SelectItem value="Form-4">
+              {language === "zh" 
+                ? "Form 4 (內部人持股變動報告)" 
+                : "Form 4 (Changes in Beneficial Ownership)"}
+            </SelectItem>
+            <SelectItem value="Form-5">
+              {language === "zh" 
+                ? "Form 5 (年度內部人持股報告)" 
+                : "Form 5 (Annual Statement of Beneficial Ownership)"}
+            </SelectItem>
+            <SelectItem value="SC-13D">
+              {language === "zh" 
+                ? "Schedule 13D (大額股份收購聲明)" 
+                : "Schedule 13D (Beneficial Ownership Report)"}
+            </SelectItem>
+            <SelectItem value="SC-13G">
+              {language === "zh" 
+                ? "Schedule 13G (簡化受益所有權申報)" 
+                : "Schedule 13G (Simplified Beneficial Ownership Report)"}
             </SelectItem>
           </SelectGroup>
           
-          {/* VI. Securities Sales and Withdrawal Applications */}
+          {/* 5. Proxy and Corporate Governance Filings */}
           <SelectGroup>
-            <SelectLabel>{language === "zh" ? "六、證券銷售與退出申請" : "VI. Securities Sales and Withdrawal Applications"}</SelectLabel>
-            <SelectItem value="Form-144">
-              {language === "zh" ? "Form 144 (證券銷售通告)" : "Form 144 (Notice of Proposed Sale)"}
-            </SelectItem>
+            <SelectLabel>
+              {language === "zh" 
+                ? "5. 股東投票及公司治理文件" 
+                : "5. Proxy and Corporate Governance Filings"}
+            </SelectLabel>
             <SelectItem value="DEF-14A">
-              {language === "zh" ? "DEF 14A (代理聲明)" : "DEF 14A (Proxy Statement)"}
+              {language === "zh" 
+                ? "DEF 14A (正式股東委任書)" 
+                : "DEF 14A (Definitive Proxy Statement)"}
+            </SelectItem>
+            <SelectItem value="DEF-14C">
+              {language === "zh" 
+                ? "DEF 14C (正式資訊說明書)" 
+                : "DEF 14C (Definitive Information Statement)"}
+            </SelectItem>
+            <SelectItem value="DEFA14A">
+              {language === "zh" 
+                ? "DEFA14A (補充披露材料)" 
+                : "DEFA14A (Additional Proxy Soliciting Materials)"}
+            </SelectItem>
+            <SelectItem value="DEFM14A">
+              {language === "zh" 
+                ? "DEFM14A (併購相關委任書)" 
+                : "DEFM14A (Merger Proxy Statement)"}
+            </SelectItem>
+          </SelectGroup>
+          
+          {/* 6. Investment Company Filings */}
+          <SelectGroup>
+            <SelectLabel>
+              {language === "zh" 
+                ? "6. 投資公司專用文件" 
+                : "6. Investment Company Filings"}
+            </SelectLabel>
+            <SelectItem value="N-1A">
+              {language === "zh" 
+                ? "Form N-1A (共同基金註冊聲明)" 
+                : "Form N-1A (Mutual Fund Registration)"}
+            </SelectItem>
+            <SelectItem value="N-2">
+              {language === "zh" 
+                ? "Form N-2 (封閉式投資公司註冊)" 
+                : "Form N-2 (Closed-End Fund Registration)"}
+            </SelectItem>
+            <SelectItem value="N-CSR">
+              {language === "zh" 
+                ? "Form N-CSR (認證年度股東報告)" 
+                : "Form N-CSR (Certified Annual Shareholder Report)"}
+            </SelectItem>
+          </SelectGroup>
+          
+          {/* 7. Miscellaneous Filings */}
+          <SelectGroup>
+            <SelectLabel>
+              {language === "zh" 
+                ? "7. 其他雜項文件" 
+                : "7. Miscellaneous Filings"}
+            </SelectLabel>
+            <SelectItem value="Form-144">
+              {language === "zh" 
+                ? "Form 144 (限制性證券銷售通告)" 
+                : "Form 144 (Notice of Proposed Sale)"}
+            </SelectItem>
+            <SelectItem value="Form-1-A">
+              {language === "zh" 
+                ? "Form 1-A (Regulation A募集說明書)" 
+                : "Form 1-A (Regulation A Offering Statement)"}
+            </SelectItem>
+            <SelectItem value="CORRESP">
+              {language === "zh" 
+                ? "CORRESP (SEC溝通函件)" 
+                : "CORRESP (Correspondence with SEC)"}
             </SelectItem>
           </SelectGroup>
         </SelectContent>
