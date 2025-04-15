@@ -57,20 +57,6 @@ npm run dev
 pnpm run dev
 ```
 
-After starting the development server, visit http://localhost:5173 to view the application.
-
-## Deployment
-
-This project is deployed using the Lovable platform. Visit the [project page](https://lovable.dev/projects/dcf3b57d-3062-4591-8925-df38906d2c74) and click "Share -> Publish" to complete the deployment.
-
-## Custom Domain
-
-You can connect your own domain to this project:
-
-1. Access project settings
-2. Navigate to the "Domains" settings page
-3. Follow the guide to add your custom domain
-
 ## License
 
 Copyright © 2024 SECGPT. All rights reserved.
