@@ -28,7 +28,7 @@ const DocumentTypeSelect = ({ value, onChange, id = "documentType" }: DocumentTy
         <FileText className="h-4 w-4 text-secgpt-accent" />
         {t("analysis.document.label")}
       </Label>
-      <Select onValueChange={onChange}>
+      <Select value={value} onValueChange={onChange}>
         <SelectTrigger className="transition-all focus:ring-2 focus:ring-secgpt-accent focus:border-transparent">
           <SelectValue placeholder={t("analysis.document.placeholder")} />
         </SelectTrigger>
@@ -42,38 +42,38 @@ const DocumentTypeSelect = ({ value, onChange, id = "documentType" }: DocumentTy
             </SelectLabel>
             <SelectItem value="S-1">
               {language === "zh" 
-                ? "Form S-1 (IPO註冊聲明)" 
+                ? "Form S-1 (首次公開發行登記聲明)" 
                 : "Form S-1 (Initial Registration Statement for IPO)"}
             </SelectItem>
             <SelectItem value="S-3">
               {language === "zh" 
-                ? "Form S-3 (簡化註冊聲明)" 
-                : "Form S-3 (Simplified Registration Statement)"}
+                ? "Form S-3 (成熟公司簡化登記聲明)" 
+                : "Form S-3 (Simplified Registration for Seasoned Companies)"}
             </SelectItem>
             <SelectItem value="S-4">
               {language === "zh" 
-                ? "Form S-4 (併購交易註冊聲明)" 
-                : "Form S-4 (Business Combinations Registration)"}
+                ? "Form S-4 (併購交易登記聲明)" 
+                : "Form S-4 (Registration for Business Combinations)"}
             </SelectItem>
             <SelectItem value="S-8">
               {language === "zh" 
-                ? "Form S-8 (員工福利計劃)" 
-                : "Form S-8 (Employee Benefit Plans)"}
-            </SelectItem>
-            <SelectItem value="S-11">
-              {language === "zh" 
-                ? "Form S-11 (房地產投資信託註冊)" 
-                : "Form S-11 (REIT Registration)"}
+                ? "Form S-8 (員工福利計劃登記)" 
+                : "Form S-8 (Employee Benefit Plans Registration)"}
             </SelectItem>
             <SelectItem value="F-1">
               {language === "zh" 
-                ? "Form F-1 (外國發行人初次註冊)" 
-                : "Form F-1 (Foreign Private Issuer Initial Registration)"}
+                ? "Form F-1 (外國發行人初次登記聲明)" 
+                : "Form F-1 (Foreign Issuer Initial Registration)"}
             </SelectItem>
             <SelectItem value="F-3">
               {language === "zh" 
-                ? "Form F-3 (外國發行人簡化註冊)" 
+                ? "Form F-3 (外國發行人簡化登記聲明)" 
                 : "Form F-3 (Foreign Issuer Simplified Registration)"}
+            </SelectItem>
+            <SelectItem value="Form-1-A">
+              {language === "zh" 
+                ? "Form 1-A (Regulation A募集說明書)" 
+                : "Form 1-A (Regulation A Offering Statement)"}
             </SelectItem>
           </SelectGroup>
           
@@ -164,13 +164,18 @@ const DocumentTypeSelect = ({ value, onChange, id = "documentType" }: DocumentTy
             </SelectItem>
             <SelectItem value="SC-13D">
               {language === "zh" 
-                ? "Schedule 13D (大額股份收購聲明)" 
-                : "Schedule 13D (Beneficial Ownership Report)"}
+                ? "Schedule 13D (5%以上股份收購聲明)" 
+                : "Schedule 13D (Beneficial Ownership Report >5%)"}
             </SelectItem>
             <SelectItem value="SC-13G">
               {language === "zh" 
-                ? "Schedule 13G (簡化受益所有權申報)" 
-                : "Schedule 13G (Simplified Beneficial Ownership Report)"}
+                ? "Schedule 13G (被動投資者簡化披露)" 
+                : "Schedule 13G (Simplified Ownership Report for Passive Investors)"}
+            </SelectItem>
+            <SelectItem value="13F-HR">
+              {language === "zh" 
+                ? "Form 13F-HR (機構投資者季度持股報告)" 
+                : "Form 13F-HR (Institutional Investment Manager Holdings)"}
             </SelectItem>
           </SelectGroup>
           
@@ -225,6 +230,11 @@ const DocumentTypeSelect = ({ value, onChange, id = "documentType" }: DocumentTy
                 ? "Form N-CSR (認證年度股東報告)" 
                 : "Form N-CSR (Certified Annual Shareholder Report)"}
             </SelectItem>
+            <SelectItem value="N-Q">
+              {language === "zh" 
+                ? "Form N-Q (季度投資組合持股報告)" 
+                : "Form N-Q (Quarterly Portfolio Holdings Report)"}
+            </SelectItem>
           </SelectGroup>
           
           {/* 7. Miscellaneous Filings */}
@@ -239,15 +249,15 @@ const DocumentTypeSelect = ({ value, onChange, id = "documentType" }: DocumentTy
                 ? "Form 144 (限制性證券銷售通告)" 
                 : "Form 144 (Notice of Proposed Sale)"}
             </SelectItem>
-            <SelectItem value="Form-1-A">
-              {language === "zh" 
-                ? "Form 1-A (Regulation A募集說明書)" 
-                : "Form 1-A (Regulation A Offering Statement)"}
-            </SelectItem>
             <SelectItem value="CORRESP">
               {language === "zh" 
                 ? "CORRESP (SEC溝通函件)" 
                 : "CORRESP (Correspondence with SEC)"}
+            </SelectItem>
+            <SelectItem value="POS-AM">
+              {language === "zh" 
+                ? "POS AM (發生後修正文件)" 
+                : "POS AM (Post-Effective Amendment)"}
             </SelectItem>
           </SelectGroup>
         </SelectContent>
