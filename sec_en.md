@@ -2,8 +2,6 @@
 
 Based on the SEC’s disclosure requirements, the following classification organizes the documents related to publicly listed companies (including domestic and overseas companies). The documents can be roughly categorized into periodic reports, initial public offerings (and subsequent registrations), current event announcements, foreign issuer documents, Regulation A series, and other related applications or withdrawal filings.
 
----
-
 ## I. Periodic Reports and Internal Disclosures
 
 ### 1. U.S. Public Company Periodic Reports (Series 10)
@@ -30,16 +28,12 @@ Based on the SEC’s disclosure requirements, the following classification organ
 - **11-K / 11-KT**  
   Annual and transition reports specifically for employee stock ownership plans.
 
----
-
 ## II. Current Event Announcements and Prompt Reports
 
 - **8-K / 8-K/A**  
   Current event reports and their amended versions that public companies must file when significant or unscheduled events occur.
 - Other variants (e.g., **8-K12B, 8-K12G3, 8-K15D5**)  
   Different versions may be issued depending on the nature of the event.
-
----
 
 ## III. IPO and Securities Issuance Documents
 
@@ -76,8 +70,6 @@ Based on the SEC’s disclosure requirements, the following classification organ
 - **SC 14D1 / SC 14D9 / SC 14F**  
   Communication documents related to acquisition proposals, solicitations, or other merger-related matters.
 
----
-
 ## IV. Foreign Issuer Documents (Overseas Listed Companies)
 
 ### 1. Periodic and Registration Reports
@@ -92,8 +84,6 @@ Based on the SEC’s disclosure requirements, the following classification organ
 - **18-K**  
   Annual reports or announcements for foreign government issuers.
 
----
-
 ## V. Regulation A Series (Small-Scale Public Offerings / Alternative Listing Path)
 (This series is commonly used by companies going public or issuing securities under Regulation A.)
 - **Form 1**  
@@ -102,8 +92,6 @@ Based on the SEC’s disclosure requirements, the following classification organ
   Offering Statement (public offering registration), amendments after the offering becomes effective, and withdrawal notices.
 - **Form 1-K / 1-SA / 1-U / 1-Z**  
   Periodic reports and exit filings (including amendments or withdrawals) required under Regulation A.
-
----
 
 ## VI. Securities Sales and Withdrawal Applications
 - **Form 144**  
