@@ -1,98 +1,115 @@
-# Classification of Publicly Listed Company Documents
+# SEC Filing Categories Classification (For Public Companies)
 
-Based on the SEC’s disclosure requirements, the following classification organizes the documents related to publicly listed companies (including domestic and overseas companies). The documents can be roughly categorized into periodic reports, initial public offerings (and subsequent registrations), current event announcements, foreign issuer documents, Regulation A series, and other related applications or withdrawal filings.
+This classification organizes the various filings required by the U.S. Securities and Exchange Commission (SEC) for public companies. It covers registration and issuance documents, periodic reports, insider holdings disclosures, proxy and corporate governance filings, merger and tender offer documents, specialized filings for investment companies, and other miscellaneous reports. (Files with a “/A” suffix are amendments or corrected versions of the original filing.)
 
-## I. Periodic Reports and Internal Disclosures
+## 1. Registration and Issuance Filings
+### 1.1 Under the Securities Act of 1933
+- **Form S-1**: Initial registration statement for an IPO  
+- **Form S-2**: Registration statement used by companies with some operating history  
+- **Form S-3**: Simplified registration statement used by seasoned companies  
+- **Form S-4**: Registration statement used in mergers, exchange offers, and other business combination transactions  
+- **Form S-6**: Registration statement for unit investment trusts  
+- **Form S-8**: Registration statement for securities offered under employee benefit plans  
+- **Form S-11**: Registration statement for Real Estate Investment Trusts (REITs) or real estate companies  
+> Each form may have corresponding amended versions (e.g., S-1/A, S-3/A, S-4/A, etc.).
 
-### 1. U.S. Public Company Periodic Reports (Series 10)
-- **10-K / 10-K/A**  
-  Annual reports and their amended versions.
-- **10-K405 / 10-K405/A**  
-  Special annual reports (in accordance with S-K Item 405).
-- **10-KSB / 10-KSB/A**  
-  Annual reports for smaller companies.
-- **10-Q / 10-Q/A**  
-  Quarterly reports and their amendments.
-- **10-KT / 10-KT/A**  
-  Reports during transition or restructuring periods.
+### 1.2 Filings for Foreign Private Issuers
+- **Form F-1**: Initial registration statement for foreign private issuers  
+- **Form F-3**: Simplified registration statement for mature foreign issuers  
+- **Form F-4**: Registration statement used by foreign private issuers in merger transactions  
+- **Form F-6**: Registration statement for American Depositary Receipts (ADRs)  
+- **Form F-7**: Registration statement for certain Canadian issuers offering securities for cash  
+- **Form F-8**: Registration statement for Canadian issuers used in exchange or merger transactions  
+- **Form F-9**: Registration statement for certain investment-grade debt or preferred securities of Canadian issuers  
+- **Form F-10** and **Form F-80**: Other registration documents for Canadian issuers
 
-### 2. Insider and Ownership Disclosures
-- **Form 3**  
-  Initial filing of beneficial ownership.
-- **Form 4**  
-  Filing of insider trading and changes in ownership.
-- **Form 5**  
-  Annual report of insider holdings.
+### 1.3 Regulation A Filings
+- **Form 1-A**: Offering statement under Regulation A  
+- **Form 1-A POS**: Post-effective amendment to a Form 1-A filing  
+- **Form 1-A-W**: Withdrawal statement for a Form 1-A filing
 
-### 3. Employee Stock Ownership Plan Reports
-- **11-K / 11-KT**  
-  Annual and transition reports specifically for employee stock ownership plans.
+## 2. Periodic Report Filings
+### 2.1 Annual Reports
+- **Form 10-K**: Annual report of a U.S. company, including audited financial statements, business overview, and risk factors  
+- **Form 10-K/A**: Amended annual report  
+- **Form 20-F**: Annual report for foreign private issuers  
+- **Form 40-F**: Annual report for certain Canadian companies  
+- Investment company reports such as **NSAR-A** and **NSAR-B**
 
-## II. Current Event Announcements and Prompt Reports
+### 2.2 Quarterly Reports
+- **Form 10-Q**: Quarterly report (unaudited) for U.S. companies  
+- **Form 10-Q/A**: Amended quarterly report  
+- **Form 10-KT / 10-KT/A**: Transition reports related to the annual report and their amendments  
+- **Form 10-QT / 10-QT/A**: Transition versions of the quarterly report and their amendments  
+- **Form 10-QSB**: Simplified quarterly report for small business issuers (and its amendment version)
 
-- **8-K / 8-K/A**  
-  Current event reports and their amended versions that public companies must file when significant or unscheduled events occur.
-- Other variants (e.g., **8-K12B, 8-K12G3, 8-K15D5**)  
-  Different versions may be issued depending on the nature of the event.
+### 2.3 Current (Event) Reports
+- **Form 8-K**: Current report disclosing material events  
+- **Form 8-K/A**: Amended current report  
+- **Form 6-K**: Current report for foreign issuers  
+- **Form 6-K/A**: Amended current report for foreign issuers
 
-## III. IPO and Securities Issuance Documents
+## 3. Insider Holdings and Trading Filings
+### 3.1 Insider Disclosures
+- **Form 3**: Initial statement of beneficial ownership for insiders  
+- **Form 4**: Insider trading report documenting changes in holdings  
+- **Form 5**: Annual insider trading report
 
-### 1. U.S. Company Initial Public Offering and Subsequent Registrations (Series S)
-- **S-1 / S-1MEF**  
-  Registration statement for an initial public offering (IPO) and related amendments.
-- **S-2**  
-  General securities registration statement.
-- **S-3 / S-3ASR / S-3D / S-3DPOS / S-3MEF**  
-  Registration statements used for shelf offerings, subsequent supplement filings, etc.
-- **S-4 / S-4EF / S-4 POS / S-4MEF**  
-  Registration statements required for mergers, acquisitions, or other business combinations.
-- **S-6**  
-  Registration statement specifically for unit investment trusts.
-- **S-8 / S-8 POS**  
-  Securities issuance filings for employee benefit plans.
-- **S-B / S-BMEF**  
-  Documents used for foreign government securities or government-related listings.
+### 3.2 Institutional and Large Investor Disclosures
+- **Form 13F-HR**: Quarterly holdings report filed by institutional investment managers  
+- **Form 13F-NT**: Institutional holdings notice report  
+- **Form 13FCONP**: Another version of the institutional holdings report  
+- **Form 13H** (and variants such as 13H-Q, 13H-A, 13H-I, 13H-R, 13H-T): Required for large traders and significant investors
 
-### 2. Small Business Issuance Documents (Series SB)
-- **SB-1 / SB-1MEF**  
-  Initial registration and amendment filings for small businesses.
-- **SB-2 / SB-2MEF**  
-  Securities issuance applications specifically for small business stocks.
-- Other derivative documents (for example, the SBSE series).
+## 4. Proxy and Corporate Governance Filings
+### 4.1 Proxy Statements and Information Disclosures
+- **Form DEF 14A**: Definitive proxy statement containing voting information  
+- **Form DEF 14C**: Definitive information statement used when proxy voting is not required  
+- **Form DEFA14A** and **DEFA14C**: Additional proxy soliciting or information materials from non-management  
+- **Form DEFC14A** and **DEFC14C**: Proxy or information statements for contested or adversarial situations  
+- **Form DEFM14A** and **DEFM14C**: Definitive proxy/information statements used in merger or acquisition contexts  
+- **Form DEFN14A**: Proxy statement filed by non-management insiders  
+- **Form DEFR14A** and **DEFR14C**: Revised proxy or information statements
 
-### 3. Acquisition and Merger-Related Documents (Series SC)
-- **SC 13D**  
-  Filing for acquiring a significant stake (commonly used for reporting changes in ownership).
-- **SC 13E1 / SC 13E3 / SC 13E4**  
-  Specific statements regarding privatization or changes in control.
-- **SC 13G**  
-  Simplified beneficial ownership filing.
-- **SC 14D1 / SC 14D9 / SC 14F**  
-  Communication documents related to acquisition proposals, solicitations, or other merger-related matters.
+### 4.2 Preliminary and Revised Proxy Materials
+- Preliminary/ Revised series: e.g. **PRE 14A**, **PRE 14C**, **PREC14A**, **PREC14C**, **PREM14A**, **PREM14C**, **PREN14A**, **PRER14A**, **PRER14C**, **PRRN14A**
 
-## IV. Foreign Issuer Documents (Overseas Listed Companies)
+## 5. Tender Offers and M&A Filings
+### 5.1 Tender Offer Disclosure
+- **Schedule 13D**: Disclosure required when an entity acquires more than 5% of a company’s voting shares  
+- **Schedule 13D/A**: Amended Schedule 13D  
+- **Schedule 13G**: Simplified disclosure for passive investors  
+- **Schedule 13G/A**: Amended Schedule 13G  
+- Other tender offer-related filings (e.g., filings under SC 14D9 or third-party tender offer documents like Schedule TO-T)
 
-### 1. Periodic and Registration Reports
-- **20-F / 20-F/A**  
-  Annual and transition reports for foreign (private) issuers.
-- **20FR12B / 20FR12G**  
-  Initial registration documents filed by foreign issuers under Section 12(b)/(g).
+## 6. Investment Company Filings
+### 6.1 Registration Filings
+- **Form N-1A**: Registration statement for open-end management investment companies (mutual funds)  
+- **Form N-2**: Registration for closed-end investment companies  
+- **Form N-3**: Registration statement for separate accounts (management investment companies)  
+- **Form N-4**: Registration statement for unit investment trusts  
+- **Form N-5**: Registration for small business investment companies  
+- **Form N-14**: Registration statement used in investment company mergers or business combination transactions  
+- **Forms 485APOS / 485BPOS**: Post-effective amendments to investment company registrations
 
-### 2. Temporary Reports for Foreign Issuers
-- **6-K / 6-K/A**  
-  Interim or periodic reports filed by foreign issuers under Rules 13a-16 and 15d-16.
-- **18-K**  
-  Annual reports or announcements for foreign government issuers.
+### 6.2 Investment Company Shareholder Reports
+- **Form N-CSR**: Certified annual shareholder report  
+- **Form N-CSRS**: Certified semiannual shareholder report  
+- **Form N-PX**: Annual proxy voting record report for management investment companies  
+- **Form N-Q**: Quarterly report of portfolio holdings  
+- The **NSAR series** (NSAR-A, NSAR-B, NSAR-BT, NSAR-U, etc.)
 
-## V. Regulation A Series (Small-Scale Public Offerings / Alternative Listing Path)
-(This series is commonly used by companies going public or issuing securities under Regulation A.)
-- **Form 1**  
-  National Securities Exchange Registration Application.
-- **Form 1-A / 1-A POS / 1-A-W**  
-  Offering Statement (public offering registration), amendments after the offering becomes effective, and withdrawal notices.
-- **Form 1-K / 1-SA / 1-U / 1-Z**  
-  Periodic reports and exit filings (including amendments or withdrawals) required under Regulation A.
+## 7. Miscellaneous Filings
+### 7.1 Amendments, Notices, and Withdrawals
+- Most filings have amendment versions denoted by a **/A** suffix (e.g., 10-K/A, 8-K/A, S-1/A, etc.)  
+- Termination and withdrawal filings (e.g., Form 15-12B, 15-12G, 15-15D and their amendments; Form 144 when selling restricted securities under Rule 144)
 
-## VI. Securities Sales and Withdrawal Applications
-- **Form 144**  
-  Proposed sales notice filed under Rule 144 (commonly used for the disposition of restricted securities by insiders).
+### 7.2 Post-Effective Amendments and Special Filings
+- **POS Series Filings**: Such as **POS AM**, **POS AMI**, **POSASR** used for post-effective amendments  
+- **CORRESP**: Correspondence and communications with the SEC  
+- Other specific filings for certain industries or purposes (e.g., Form 10-D for asset-backed issuers; Forms 1-E AD, 2-E for sales materials)
+
+> **Note:**  
+> 1. This classification focuses on filings required for public companies; filings used in private placements (such as Form D) are not included.  
+> 2. Files with “/A” indicate amended or supplementary filings.  
+> 3. The SEC EDGAR system contains hundreds of filing types; this classification compiles the main and commonly used ones for reference.
