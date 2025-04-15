@@ -1,21 +1,17 @@
-
 import { Upload, Cpu, Layers } from "lucide-react";
 import { useLanguage } from "@/providers/LanguageProvider";
-
 const HowItWorksSection = () => {
-  const { t } = useLanguage();
-  
-  return (
-    <section className="py-20 md:py-24 relative overflow-hidden">
+  const {
+    t
+  } = useLanguage();
+  return <section className="py-20 md:py-24 relative overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background via-background/70 to-background"></div>
       <div className="container px-4 md:px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold tech-text-gradient mb-4">
             {t("home.how_it_works.title")}
           </h2>
-          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-            {t("home.description")}
-          </p>
+          
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
@@ -56,8 +52,6 @@ const HowItWorksSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HowItWorksSection;

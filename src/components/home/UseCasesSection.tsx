@@ -1,20 +1,16 @@
-
 import { Users, Building, CheckCircle } from "lucide-react";
 import { useLanguage } from "@/providers/LanguageProvider";
-
 const UseCasesSection = () => {
-  const { t } = useLanguage();
-  
-  return (
-    <section className="py-16 bg-gradient-to-b from-background to-secgpt-blue/5">
+  const {
+    t
+  } = useLanguage();
+  return <section className="py-16 bg-gradient-to-b from-background to-secgpt-blue/5">
       <div className="container px-4 md:px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold tech-text-gradient mb-4">
             {t("home.features")}
           </h2>
-          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-            {t("home.description")}
-          </p>
+          
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -75,8 +71,6 @@ const UseCasesSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default UseCasesSection;
