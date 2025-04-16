@@ -12,13 +12,9 @@ const KeyFeaturesSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold tech-text-gradient mb-4">
             {t("home.features.title")}
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            {t("home.features.subtitle")}
-          </p>
           
-          <p className="mt-4 text-base text-muted-foreground/70 max-w-3xl mx-auto">
-            {t("home.features.description")}
-          </p>
+          
+          
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

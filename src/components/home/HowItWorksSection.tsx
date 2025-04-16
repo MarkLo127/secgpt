@@ -26,7 +26,7 @@ const HowItWorksSection = () => {
             </div>
             <h3 className="text-xl font-semibold">{t("home.how_it_works.step1.title")}</h3>
             <p className="text-muted-foreground">{t("home.how_it_works.step1.description")}</p>
-            <p className="text-sm text-secgpt-blue">{t("analysis.upload.supports")}</p>
+            
           </div>
 
           {/* Step 2 */}
@@ -37,7 +37,7 @@ const HowItWorksSection = () => {
             </div>
             <h3 className="text-xl font-semibold">{t("home.how_it_works.step2.title")}</h3>
             <p className="text-muted-foreground">{t("home.how_it_works.step2.description")}</p>
-            <p className="text-sm text-secgpt-blue">{t("home.features")}</p>
+            
           </div>
 
           {/* Step 3 */}
@@ -48,7 +48,7 @@ const HowItWorksSection = () => {
             </div>
             <h3 className="text-xl font-semibold">{t("home.how_it_works.step3.title")}</h3>
             <p className="text-muted-foreground">{t("home.how_it_works.step3.description")}</p>
-            <p className="text-sm text-secgpt-blue">{t("home.features")}</p>
+            
           </div>
         </div>
       </div>
