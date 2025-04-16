@@ -1,4 +1,3 @@
-
 {
   "home.title": "SECGPT - Transforming Financial Data into Strategic Insights",
   "home.subtitle": "Unraveling Complex SEC Documents with Advanced AI",
@@ -11,7 +10,9 @@
   "home.how_it_works.step2.description": "Our advanced AI agent processes and understands complex financial text.",
   "home.how_it_works.step3.title": "Instant Insights",
   "home.how_it_works.step3.description": "Receive clear, concise summaries and actionable intelligence.",
-  "home.features": "Key Features",
+  "home.features.title": "Powerful AI-Driven Solutions",
+  "home.features.subtitle": "Transforming SEC Document Analysis with Cutting-Edge Technology",
+  "home.features": "Explore Key Capabilities",
   "home.feature1.title": "Comprehensive Document Analysis",
   "home.feature1.description": "Analyze various SEC documents including 10-K, 10-Q, 8-K, and more with precision.",
   "home.feature2.title": "Natural Language Queries",

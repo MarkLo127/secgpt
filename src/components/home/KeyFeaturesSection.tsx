@@ -1,18 +1,24 @@
+
 import { FileText, Search, BarChart, AreaChart, Building, CheckCircle } from "lucide-react";
 import { Card, CardHeader, CardContent, CardFooter, CardTitle } from "@/components/ui/card";
 import { useLanguage } from "@/providers/LanguageProvider";
+
 const KeyFeaturesSection = () => {
-  const {
-    t,
-    language
-  } = useLanguage();
-  return <section className="py-16 md:py-24 bg-background/50">
+  const { t, language } = useLanguage();
+  
+  return (
+    <section className="py-16 md:py-24 bg-background/50">
       <div className="container px-4 md:px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold tech-text-gradient mb-4">
-            {t("home.features")}
+            {t("home.features.title")}
           </h2>
-          
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            {t("home.features.subtitle")}
+          </p>
+          <p className="mt-4 text-lg text-muted-foreground/80">
+            {t("home.features")}
+          </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -137,6 +143,8 @@ const KeyFeaturesSection = () => {
           </Card>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default KeyFeaturesSection;
