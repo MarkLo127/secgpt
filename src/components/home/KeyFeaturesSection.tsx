@@ -31,9 +31,7 @@ const KeyFeaturesSection = () => {
                 {t("home.feature1.description")}
               </p>
             </CardContent>
-            <CardFooter>
-              <p className="text-sm text-secgpt-blue text-center">{t("analysis.document.category1")}</p>
-            </CardFooter>
+            
           </Card>
 
           {/* Feature 2 */}
@@ -49,9 +47,7 @@ const KeyFeaturesSection = () => {
                 {t("home.feature2.description")}
               </p>
             </CardContent>
-            <CardFooter>
-              <p className="text-sm text-secgpt-blue text-center">{t("chat.placeholder")}</p>
-            </CardFooter>
+            
           </Card>
 
           {/* Feature 3 */}
@@ -67,9 +63,7 @@ const KeyFeaturesSection = () => {
                 {t("home.feature3.description")}
               </p>
             </CardContent>
-            <CardFooter>
-              <p className="text-sm text-secgpt-blue text-center">{t("analysis.document.category3")}</p>
-            </CardFooter>
+            
           </Card>
 
           {/* Feature 4 */}
@@ -87,11 +81,7 @@ const KeyFeaturesSection = () => {
                 {language === "zh" ? "識別和可視化關鍵財務指標的歷史趨勢，以了解公司績效的長期走向。" : "Identify and visualize historical trends in key financial metrics to understand the long-term direction of company performance."}
               </p>
             </CardContent>
-            <CardFooter>
-              <p className="text-sm text-secgpt-blue text-center">
-                {language === "zh" ? "多年財務數據比較和圖表可視化" : "Multi-year financial data comparison and chart visualization"}
-              </p>
-            </CardFooter>
+            
           </Card>
 
           {/* Feature 5 */}
@@ -109,11 +99,7 @@ const KeyFeaturesSection = () => {
                 {language === "zh" ? "將目標公司與行業競爭對手進行並排比較，了解相對優勢和潛在風險。" : "Compare target companies with industry competitors side-by-side to understand relative strengths and potential risks."}
               </p>
             </CardContent>
-            <CardFooter>
-              <p className="text-sm text-secgpt-blue text-center">
-                {language === "zh" ? "行業基準和競爭格局評估" : "Industry benchmarking and competitive landscape assessment"}
-              </p>
-            </CardFooter>
+            
           </Card>
 
           {/* Feature 6 */}
@@ -131,11 +117,7 @@ const KeyFeaturesSection = () => {
                 {language === "zh" ? "自動識別和標記公司報告中的合規問題和信息披露異常，以降低法律和監管風險。" : "Automatically identify and flag compliance issues and disclosure anomalies in company reports to reduce legal and regulatory risks."}
               </p>
             </CardContent>
-            <CardFooter>
-              <p className="text-sm text-secgpt-blue text-center">
-                {language === "zh" ? "監管合規風險早期預警" : "Regulatory compliance risk early warning"}
-              </p>
-            </CardFooter>
+            
           </Card>
         </div>
       </div>
