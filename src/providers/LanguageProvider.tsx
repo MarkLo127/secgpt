@@ -1,4 +1,3 @@
-
 import { createContext, useContext, useEffect, useState } from "react";
 
 type Language = "en" | "zh";
@@ -16,9 +15,9 @@ type LanguageProviderState = {
 
 const translations = {
   en: {
-    "home.title": "SECGPT - AI-Powered SEC Document Analysis",
-    "home.subtitle": "Transforming Complex Financial Documents into Actionable Insights",
-    "home.description": "Leverage cutting-edge AI technology to instantly analyze and extract critical information from SEC filings, saving you time and providing deep financial intelligence.",
+    "home.title": "SECGPT - Transforming Financial Data into Strategic Insights",
+    "home.subtitle": "Unraveling Complex SEC Documents with Advanced AI",
+    "home.description": "Harness cutting-edge AI to decode intricate financial narratives, turning raw SEC data into actionable intelligence and strategic foresight.",
     "home.cta": "Start Analyzing",
     "home.how_it_works.title": "How SECGPT Works",
     "home.how_it_works.step1.title": "Upload Documents",
@@ -88,9 +87,9 @@ const translations = {
     "analysis.sec.edgar.link": "Search and download documents from SEC EDGAR"
   },
   zh: {
-    "home.title": "SECGPT - AI驅動的SEC文件分析",
-    "home.subtitle": "將複雜的財務文件轉化為可操作的洞察",
-    "home.description": "利用尖端AI技術即時分析和提取SEC文件中的關鍵資訊，為您節省時間並提供深入的財務智能。",
+    "home.title": "SECGPT - 將金融數據轉化為戰略洞察",
+    "home.subtitle": "用先進AI解析複雜的SEC文件",
+    "home.description": "運用尖端AI技術解讀複雜的財務敘事，將原始SEC數據轉化為可操作的情報和戰略前瞻。",
     "home.cta": "開始分析",
     "home.how_it_works.title": "SECGPT工作原理",
     "home.how_it_works.step1.title": "上傳文件",
