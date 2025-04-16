@@ -4,8 +4,6 @@ const KeyBenefitsSection = () => {
   const {
     t
   } = useLanguage();
-  return <section className="py-16 bg-background/80">
-      
-    </section>;
+  return;
 };
 export default KeyBenefitsSection;
