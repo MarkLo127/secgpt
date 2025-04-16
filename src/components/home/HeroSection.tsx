@@ -12,7 +12,7 @@ const HeroSection = () => {
           <div className="inline-block p-2 px-3 bg-secgpt-blue/10 rounded-full mb-4 animate-fade-in">
             <span className="text-secgpt-blue font-medium text-sm">{t("home.title")}</span>
           </div>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tech-text-gradient animate-fade-in text-center">
+          <h1 className="text-4xl md:text-6xl font-bold tech-text-gradient animate-fade-in text-center lg:text-5xl">
             SECGPT - {t("home.subtitle")}
           </h1>
           <p className="text-xl text-muted-foreground md:text-2xl max-w-[800px] animate-fade-in text-center">
