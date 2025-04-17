@@ -30,6 +30,8 @@ export function LanguageProvider({
   );
 
   const t = (key: string): string => {
+    if (!key) return '';
+    
     // Check if the key exists in the current language translations
     if (
       translations[language] && 
