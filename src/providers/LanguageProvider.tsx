@@ -30,7 +30,18 @@ export function LanguageProvider({
   );
 
   const t = (key: string): string => {
-    return translations[language][key as TranslationKey] || key;
+    // Check if the key exists in the current language translations
+    if (translations[language] && key in translations[language]) {
+      return translations[language][key as TranslationKey];
+    }
+    
+    // If not found in the current language, try English
+    if (language !== "en" && translations["en"] && key in translations["en"]) {
+      return translations["en"][key as TranslationKey];
+    }
+    
+    // If still not found, return the key itself
+    return key;
   };
 
   const value = {

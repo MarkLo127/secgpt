@@ -5,7 +5,7 @@ import { TranslationKey } from "@/translations";
 export function useTranslation() {
   const { language, setLanguage, t } = useLanguage();
   
-  const translate = (key: TranslationKey): string => {
+  const translate = (key: TranslationKey | string): string => {
     return t(key);
   };
   
