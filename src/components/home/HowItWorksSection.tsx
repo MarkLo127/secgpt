@@ -1,3 +1,4 @@
+
 import { Upload, Cpu, Layers } from "lucide-react";
 import { useLanguage } from "@/providers/LanguageProvider";
 const HowItWorksSection = () => {
@@ -11,7 +12,9 @@ const HowItWorksSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold tech-text-gradient mb-4">
             {t("home.how_it_works.title")}
           </h2>
-          
+          <p className="text-muted-foreground max-w-3xl mx-auto">
+            {t("home.how_it_works.desc_short")}
+          </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">

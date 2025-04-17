@@ -1,3 +1,4 @@
+
 import { FileText, Search, BarChart, AreaChart, Building, CheckCircle } from "lucide-react";
 import { Card, CardHeader, CardContent, CardFooter, CardTitle } from "@/components/ui/card";
 import { useLanguage } from "@/providers/LanguageProvider";
@@ -13,7 +14,9 @@ const KeyFeaturesSection = () => {
             {t("home.features.title")}
           </h2>
           
-          
+          <p className="text-muted-foreground max-w-3xl mx-auto">
+            {t("home.features.desc_short")}
+          </p>
           
         </div>
         

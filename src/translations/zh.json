@@ -1,3 +1,4 @@
+
 {
   "home.title": "SECGPT - 將金融數據轉化為戰略洞察",
   "home.subtitle": "用先進AI解析複雜的SEC文件",
@@ -32,6 +33,12 @@
   "home.feature6.title": "合規審查",
   "home.feature6.description": "自動識別和標記公司報告中的合規問題和信息披露異常，以降低法律和監管風險。",
   "home.feature6.footer": "監管合規風險早期預警",
+  "home.benefit1.title": "提高效率",
+  "home.benefit1.description": "節省手動分析的時間，從複雜的財務文件中獲取即時AI驅動的見解。",
+  "home.benefit2.title": "降低風險",
+  "home.benefit2.description": "識別傳統分析可能遺漏的潛在危險信號和合規問題。",
+  "home.benefit3.title": "競爭優勢",
+  "home.benefit3.description": "獲得比傳統分析工具更深入的見解，做出更明智的投資決策。",
   "nav.home": "首頁",
   "nav.analysis": "分析",
   "nav.language": "語言",
