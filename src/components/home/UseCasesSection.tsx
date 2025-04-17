@@ -1,9 +1,9 @@
 
 import { Users, Building, CheckCircle } from "lucide-react";
-import { useLanguage } from "@/providers/LanguageProvider";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const UseCasesSection = () => {
-  const { t, language } = useLanguage();
+  const { t } = useTranslation();
   
   return (
     <section className="py-16 bg-gradient-to-b from-background to-background/95">
