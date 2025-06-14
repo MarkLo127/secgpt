@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Send, ArrowLeft, User, Shield } from "lucide-react";
+import { Send, ArrowLeft, User } from "lucide-react";
 
 type Message = {
   role: "system" | "user" | "assistant";
@@ -20,6 +20,8 @@ type FormData = {
   ticker: string;
   documentType: string;
 };
+
+const SEAL_ICON_URL = "https://images.unsplash.com/photo-1563897539352-870624131b32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80";
 
 const Chat = () => {
   const { t } = useLanguage();
@@ -146,9 +148,11 @@ const Chat = () => {
                             <User className="h-6 w-6" />
                           </div>
                         ) : (
-                          <div className="w-10 h-10 rounded-full flex items-center justify-center bg-gradient-to-br from-secgpt-blue to-secgpt-accent">
-                            <Shield className="h-6 w-6 text-white" />
-                          </div>
+                          <img
+                            src={SEAL_ICON_URL}
+                            alt="SECGPT Seal Icon"
+                            className="w-10 h-10 rounded-full object-cover"
+                          />
                         )}
                       </div>
                       <div className={`flex-1 pt-1.5 ${isUser ? 'text-right' : 'text-left'}`}>
@@ -165,8 +169,12 @@ const Chat = () => {
               })}
               {loading && (
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full flex items-center justify-center shrink-0 bg-gradient-to-br from-secgpt-blue to-secgpt-accent">
-                    <Shield className="h-6 w-6 text-white" />
+                  <div className="w-10 h-10 rounded-full flex items-center justify-center shrink-0">
+                    <img
+                      src={SEAL_ICON_URL}
+                      alt="SECGPT Seal Icon"
+                      className="w-10 h-10 rounded-full object-cover"
+                    />
                   </div>
                   <div className="flex-1 pt-1.5">
                     <p className="font-semibold text-foreground">SECGPT</p>
