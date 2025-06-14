@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { useLanguage } from "@/providers/LanguageProvider";
@@ -7,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Send, ArrowLeft, FileText, User } from "lucide-react";
+import { Send, ArrowLeft, User, Sparkles } from "lucide-react";
 
 type Message = {
   role: "system" | "user" | "assistant";
@@ -111,78 +110,67 @@ const Chat = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-background">
       <Navbar />
       
-      <main className="flex-1 container py-6 flex flex-col">
-        <div className="mb-4 flex items-center">
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={handleBackToHome}
-            className="mr-2"
-          >
-            <ArrowLeft className="h-5 w-5" />
-          </Button>
-          <h1 className="text-2xl font-semibold tech-text-gradient">
-            {formData ? `${formData.ticker} - ${formData.documentType}` : "SECGPT"}
-          </h1>
+      <main className="flex-1 flex flex-col">
+        {/* Header */}
+        <div className="p-4 border-b">
+          <div className="max-w-4xl mx-auto flex items-center">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={handleBackToHome}
+              className="mr-2"
+            >
+              <ArrowLeft className="h-5 w-5" />
+            </Button>
+            <h1 className="text-xl font-semibold text-foreground">
+              {formData ? `${formData.ticker} - ${formData.documentType}` : "SECGPT"}
+            </h1>
+          </div>
         </div>
-        
-        <div className="flex-1 glass-card overflow-hidden flex flex-col">
-          <div className="flex-1 overflow-y-auto p-4">
-            <div className="space-y-4">
+
+        {/* Chat Messages */}
+        <div className="flex-1 overflow-y-auto">
+          <div className="max-w-4xl mx-auto">
+            <div className="divide-y divide-border">
               {messages.slice(1).map((message, index) => (
-                <div
-                  key={index}
-                  className={`flex ${
-                    message.role === "user" ? "justify-end" : "justify-start"
-                  }`}
-                >
+                <div key={index} className="py-6 flex items-start gap-4 px-4 md:px-0">
                   <div
-                    className={`flex items-start gap-2 max-w-[80%] ${
-                      message.role === "user"
-                        ? "flex-row-reverse"
-                        : "flex-row"
-                    }`}
+                    className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0`}
                   >
-                    <div
-                      className={`w-8 h-8 rounded-full flex items-center justify-center ${
-                        message.role === "user"
-                          ? "bg-primary"
-                          : "bg-secondary"
-                      }`}
-                    >
-                      {message.role === "user" ? (
-                        <User className="h-5 w-5 text-primary-foreground" />
-                      ) : (
-                        <FileText className="h-5 w-5 text-secondary-foreground" />
-                      )}
-                    </div>
-                    <div
-                      className={`p-3 rounded-lg ${
-                        message.role === "user"
-                          ? "bg-primary text-primary-foreground"
-                          : "bg-secondary text-secondary-foreground"
-                      }`}
-                    >
+                    {message.role === "user" ? (
+                      <div className="w-10 h-10 rounded-full flex items-center justify-center bg-primary/20 text-primary">
+                        <User className="h-6 w-6" />
+                      </div>
+                    ) : (
+                      <div className="w-10 h-10 rounded-full flex items-center justify-center bg-gradient-to-br from-secgpt-blue to-secgpt-accent">
+                        <Sparkles className="h-6 w-6 text-white" />
+                      </div>
+                    )}
+                  </div>
+                  <div className="flex-1 pt-1.5">
+                    <p className="font-semibold text-foreground">
+                      {message.role === "user" ? t("chat.you") : "SECGPT"}
+                    </p>
+                    <p className="mt-1 text-foreground/90 whitespace-pre-wrap">
                       {message.content}
-                    </div>
+                    </p>
                   </div>
                 </div>
               ))}
               {loading && (
-                <div className="flex justify-start">
-                  <div className="flex items-start gap-2 max-w-[80%]">
-                    <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center">
-                      <FileText className="h-5 w-5 text-secondary-foreground" />
-                    </div>
-                    <div className="p-3 rounded-lg bg-secondary text-secondary-foreground">
-                      <div className="flex items-center gap-1">
-                        <span className="animate-pulse">●</span>
-                        <span className="animate-pulse delay-100">●</span>
-                        <span className="animate-pulse delay-200">●</span>
-                      </div>
+                <div className="py-6 flex items-start gap-4 px-4 md:px-0">
+                  <div className="w-10 h-10 rounded-full flex items-center justify-center shrink-0 bg-gradient-to-br from-secgpt-blue to-secgpt-accent">
+                    <Sparkles className="h-6 w-6 text-white" />
+                  </div>
+                  <div className="flex-1 pt-1.5">
+                    <p className="font-semibold text-foreground">SECGPT</p>
+                    <div className="mt-2 flex items-center gap-2 text-foreground/90">
+                      <span className="h-2 w-2 bg-current rounded-full animate-pulse"></span>
+                      <span className="h-2 w-2 bg-current rounded-full animate-pulse [animation-delay:200ms]"></span>
+                      <span className="h-2 w-2 bg-current rounded-full animate-pulse [animation-delay:400ms]"></span>
                     </div>
                   </div>
                 </div>
@@ -190,17 +178,20 @@ const Chat = () => {
               <div ref={messagesEndRef} />
             </div>
           </div>
-          
-          <div className="p-4 border-t">
-            <form onSubmit={handleSubmit} className="flex gap-2">
+        </div>
+        
+        {/* Input Form */}
+        <div className="p-4 border-t bg-background">
+          <div className="max-w-4xl mx-auto">
+            <form onSubmit={handleSubmit} className="relative">
               <Input
                 placeholder={t("chat.placeholder")}
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 disabled={loading}
-                className="flex-1"
+                className="w-full rounded-full py-6 pl-5 pr-16 bg-muted border-none focus-visible:ring-1 focus-visible:ring-primary/50 shadow-sm"
               />
-              <Button type="submit" size="icon" disabled={loading}>
+              <Button type="submit" size="icon" disabled={loading} className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full w-9 h-9">
                 <Send className="h-5 w-5" />
               </Button>
             </form>
