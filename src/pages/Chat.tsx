@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Send, ArrowLeft, User, Seal } from "lucide-react";
+import { Send, ArrowLeft, User, Sparkles } from "lucide-react";
 
 type Message = {
   role: "system" | "user" | "assistant";
@@ -134,39 +134,36 @@ const Chat = () => {
         {/* Chat Messages */}
         <div className="flex-1 overflow-y-auto">
           <div className="max-w-4xl mx-auto">
-            <div className="space-y-6 py-6 px-4 md:px-0">
-              {messages.slice(1).map((message, index) => {
-                const isUser = message.role === "user";
-                return (
-                  <div key={index} className={`w-full flex ${isUser ? 'justify-end' : 'justify-start'}`}>
-                    <div className={`flex items-start gap-4 max-w-2xl ${isUser ? 'flex-row-reverse' : ''}`}>
-                      <div className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0`}>
-                        {isUser ? (
-                          <div className="w-10 h-10 rounded-full flex items-center justify-center bg-primary/20 text-primary">
-                            <User className="h-6 w-6" />
-                          </div>
-                        ) : (
-                          <div className="w-10 h-10 rounded-full flex items-center justify-center bg-gradient-to-br from-secgpt-blue to-secgpt-accent">
-                            <Seal className="h-6 w-6 text-white" />
-                          </div>
-                        )}
+            <div className="divide-y divide-border">
+              {messages.slice(1).map((message, index) => (
+                <div key={index} className="py-6 flex items-start gap-4 px-4 md:px-0">
+                  <div
+                    className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0`}
+                  >
+                    {message.role === "user" ? (
+                      <div className="w-10 h-10 rounded-full flex items-center justify-center bg-primary/20 text-primary">
+                        <User className="h-6 w-6" />
                       </div>
-                      <div className={`flex-1 pt-1.5 ${isUser ? 'text-right' : 'text-left'}`}>
-                        <p className="font-semibold text-foreground">
-                          {isUser ? t("chat.you") : "SECGPT"}
-                        </p>
-                        <p className="mt-1 text-foreground/90 whitespace-pre-wrap">
-                          {message.content}
-                        </p>
+                    ) : (
+                      <div className="w-10 h-10 rounded-full flex items-center justify-center bg-gradient-to-br from-secgpt-blue to-secgpt-accent">
+                        <Sparkles className="h-6 w-6 text-white" />
                       </div>
-                    </div>
+                    )}
                   </div>
-                );
-              })}
+                  <div className="flex-1 pt-1.5">
+                    <p className="font-semibold text-foreground">
+                      {message.role === "user" ? t("chat.you") : "SECGPT"}
+                    </p>
+                    <p className="mt-1 text-foreground/90 whitespace-pre-wrap">
+                      {message.content}
+                    </p>
+                  </div>
+                </div>
+              ))}
               {loading && (
-                <div className="flex items-start gap-4">
+                <div className="py-6 flex items-start gap-4 px-4 md:px-0">
                   <div className="w-10 h-10 rounded-full flex items-center justify-center shrink-0 bg-gradient-to-br from-secgpt-blue to-secgpt-accent">
-                    <Seal className="h-6 w-6 text-white" />
+                    <Sparkles className="h-6 w-6 text-white" />
                   </div>
                   <div className="flex-1 pt-1.5">
                     <p className="font-semibold text-foreground">SECGPT</p>
