@@ -22,10 +22,10 @@ const KeyFeaturesSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Feature 1 */}
-          <Card className="hover:shadow-lg transition-shadow duration-300 border-secgpt-blue/20">
+          <Card className="hover:shadow-lg transition-shadow duration-300 border-secgpt-blue/20 group">
             <CardHeader className="space-y-1">
-              <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-2">
-                <FileText className="h-6 w-6 text-secgpt-blue" />
+              <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-2 animate-pulse-slow">
+                <FileText className="h-6 w-6 text-secgpt-blue transition-transform duration-300 group-hover:rotate-[15deg] group-hover:scale-125" />
               </div>
               <CardTitle className="text-xl text-center">{t("home.feature1.title")}</CardTitle>
             </CardHeader>
@@ -38,10 +38,10 @@ const KeyFeaturesSection = () => {
           </Card>
 
           {/* Feature 2 */}
-          <Card className="hover:shadow-lg transition-shadow duration-300 border-secgpt-blue/20">
+          <Card className="hover:shadow-lg transition-shadow duration-300 border-secgpt-blue/20 group">
             <CardHeader className="space-y-1">
-              <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-2">
-                <Search className="h-6 w-6 text-secgpt-blue" />
+              <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-2 animate-pulse-slow">
+                <Search className="h-6 w-6 text-secgpt-blue transition-transform duration-300 group-hover:rotate-[15deg] group-hover:scale-125" />
               </div>
               <CardTitle className="text-xl text-center">{t("home.feature2.title")}</CardTitle>
             </CardHeader>
@@ -54,10 +54,10 @@ const KeyFeaturesSection = () => {
           </Card>
 
           {/* Feature 3 */}
-          <Card className="hover:shadow-lg transition-shadow duration-300 border-secgpt-blue/20">
+          <Card className="hover:shadow-lg transition-shadow duration-300 border-secgpt-blue/20 group">
             <CardHeader className="space-y-1">
-              <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-2">
-                <BarChart className="h-6 w-6 text-secgpt-blue" />
+              <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-2 animate-pulse-slow">
+                <BarChart className="h-6 w-6 text-secgpt-blue transition-transform duration-300 group-hover:rotate-[15deg] group-hover:scale-125" />
               </div>
               <CardTitle className="text-xl text-center">{t("home.feature3.title")}</CardTitle>
             </CardHeader>
@@ -70,10 +70,10 @@ const KeyFeaturesSection = () => {
           </Card>
 
           {/* Feature 4 */}
-          <Card className="hover:shadow-lg transition-shadow duration-300 border-secgpt-blue/20">
+          <Card className="hover:shadow-lg transition-shadow duration-300 border-secgpt-blue/20 group">
             <CardHeader className="space-y-1">
-              <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-2">
-                <AreaChart className="h-6 w-6 text-secgpt-blue" />
+              <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-2 animate-pulse-slow">
+                <AreaChart className="h-6 w-6 text-secgpt-blue transition-transform duration-300 group-hover:rotate-[15deg] group-hover:scale-125" />
               </div>
               <CardTitle className="text-xl text-center">
                 {language === "zh" ? "趨勢分析" : "Trend Analysis"}
@@ -88,10 +88,10 @@ const KeyFeaturesSection = () => {
           </Card>
 
           {/* Feature 5 */}
-          <Card className="hover:shadow-lg transition-shadow duration-300 border-secgpt-blue/20">
+          <Card className="hover:shadow-lg transition-shadow duration-300 border-secgpt-blue/20 group">
             <CardHeader className="space-y-1">
-              <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-2">
-                <Building className="h-6 w-6 text-secgpt-blue" />
+              <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-2 animate-pulse-slow">
+                <Building className="h-6 w-6 text-secgpt-blue transition-transform duration-300 group-hover:rotate-[15deg] group-hover:scale-125" />
               </div>
               <CardTitle className="text-xl text-center">
                 {language === "zh" ? "競爭對手比較" : "Competitor Comparison"}
@@ -106,10 +106,10 @@ const KeyFeaturesSection = () => {
           </Card>
 
           {/* Feature 6 */}
-          <Card className="hover:shadow-lg transition-shadow duration-300 border-secgpt-blue/20">
+          <Card className="hover:shadow-lg transition-shadow duration-300 border-secgpt-blue/20 group">
             <CardHeader className="space-y-1">
-              <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-2">
-                <CheckCircle className="h-6 w-6 text-secgpt-blue" />
+              <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-2 animate-pulse-slow">
+                <CheckCircle className="h-6 w-6 text-secgpt-blue transition-transform duration-300 group-hover:rotate-[15deg] group-hover:scale-125" />
               </div>
               <CardTitle className="text-xl text-center">
                 {language === "zh" ? "合規審查" : "Compliance Review"}
