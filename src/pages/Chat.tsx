@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Send, ArrowLeft, User, Seal } from "lucide-react";
+import { Send, ArrowLeft, User, Shield } from "lucide-react";
 
 type Message = {
   role: "system" | "user" | "assistant";
@@ -147,7 +147,7 @@ const Chat = () => {
                           </div>
                         ) : (
                           <div className="w-10 h-10 rounded-full flex items-center justify-center bg-gradient-to-br from-secgpt-blue to-secgpt-accent">
-                            <Seal className="h-6 w-6 text-white" />
+                            <Shield className="h-6 w-6 text-white" />
                           </div>
                         )}
                       </div>
@@ -166,7 +166,7 @@ const Chat = () => {
               {loading && (
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-full flex items-center justify-center shrink-0 bg-gradient-to-br from-secgpt-blue to-secgpt-accent">
-                    <Seal className="h-6 w-6 text-white" />
+                    <Shield className="h-6 w-6 text-white" />
                   </div>
                   <div className="flex-1 pt-1.5">
                     <p className="font-semibold text-foreground">SECGPT</p>
