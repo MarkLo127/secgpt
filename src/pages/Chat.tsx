@@ -1,12 +1,13 @@
+
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { useLanguage } from "@/providers/LanguageProvider";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Send, ArrowLeft, User } from "lucide-react";
+import ChatHeader from "@/components/chat/ChatHeader";
+import MessageList from "@/components/chat/MessageList";
+import ChatInput from "@/components/chat/ChatInput";
 
 type Message = {
   role: "system" | "user" | "assistant";
@@ -20,8 +21,6 @@ type FormData = {
   ticker: string;
   documentType: string;
 };
-
-const SEAL_ICON_URL = "https://images.unsplash.com/photo-1563897539352-870624131b32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80";
 
 const Chat = () => {
   const { t } = useLanguage();
@@ -116,98 +115,26 @@ const Chat = () => {
       <Navbar />
       
       <main className="flex-1 flex flex-col">
-        {/* Header */}
-        <div className="p-4 border-b">
-          <div className="max-w-4xl mx-auto flex items-center">
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={handleBackToHome}
-              className="mr-2"
-            >
-              <ArrowLeft className="h-5 w-5" />
-            </Button>
-            <h1 className="text-xl font-semibold text-foreground">
-              {formData ? `${formData.ticker} - ${formData.documentType}` : "SECGPT"}
-            </h1>
-          </div>
-        </div>
+        <ChatHeader
+          ticker={formData?.ticker}
+          documentType={formData?.documentType}
+          onBack={handleBackToHome}
+        />
 
-        {/* Chat Messages */}
-        <div className="flex-1 overflow-y-auto">
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-6 py-6 px-4 md:px-0">
-              {messages.slice(1).map((message, index) => {
-                const isUser = message.role === "user";
-                return (
-                  <div key={index} className={`w-full flex ${isUser ? 'justify-end' : 'justify-start'}`}>
-                    <div className={`flex items-start gap-4 max-w-2xl ${isUser ? 'flex-row-reverse' : ''}`}>
-                      <div className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0`}>
-                        {isUser ? (
-                          <div className="w-10 h-10 rounded-full flex items-center justify-center bg-primary/20 text-primary">
-                            <User className="h-6 w-6" />
-                          </div>
-                        ) : (
-                          <img
-                            src={SEAL_ICON_URL}
-                            alt="SECGPT Seal Icon"
-                            className="w-10 h-10 rounded-full object-cover"
-                          />
-                        )}
-                      </div>
-                      <div className={`flex-1 pt-1.5 ${isUser ? 'text-right' : 'text-left'}`}>
-                        <p className="font-semibold text-foreground">
-                          {isUser ? t("chat.you") : "SECGPT"}
-                        </p>
-                        <p className="mt-1 text-foreground/90 whitespace-pre-wrap">
-                          {message.content}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-              {loading && (
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full flex items-center justify-center shrink-0">
-                    <img
-                      src={SEAL_ICON_URL}
-                      alt="SECGPT Seal Icon"
-                      className="w-10 h-10 rounded-full object-cover"
-                    />
-                  </div>
-                  <div className="flex-1 pt-1.5">
-                    <p className="font-semibold text-foreground">SECGPT</p>
-                    <div className="mt-2 flex items-center gap-2 text-foreground/90">
-                      <span className="h-2 w-2 bg-current rounded-full animate-pulse"></span>
-                      <span className="h-2 w-2 bg-current rounded-full animate-pulse [animation-delay:200ms]"></span>
-                      <span className="h-2 w-2 bg-current rounded-full animate-pulse [animation-delay:400ms]"></span>
-                    </div>
-                  </div>
-                </div>
-              )}
-              <div ref={messagesEndRef} />
-            </div>
-          </div>
-        </div>
+        <MessageList
+          messages={messages}
+          loading={loading}
+          messagesEndRef={messagesEndRef}
+          t={t}
+        />
         
-        {/* Input Form */}
-        <div className="p-4 border-t bg-background">
-          <div className="max-w-4xl mx-auto">
-            <form onSubmit={handleSubmit} className="relative">
-              <Input
-                placeholder={t("chat.placeholder")}
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                disabled={loading}
-                className="w-full rounded-full py-6 pl-5 pr-16 bg-muted border-none focus-visible:ring-1 focus-visible:ring-primary/50 shadow-sm"
-              />
-              <Button type="submit" size="icon" disabled={loading} className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full w-9 h-9">
-                <Send className="h-5 w-5" />
-              </Button>
-            </form>
-          </div>
-        </div>
+        <ChatInput
+          input={input}
+          setInput={setInput}
+          handleSubmit={handleSubmit}
+          loading={loading}
+          t={t}
+        />
       </main>
       
       <Footer />
