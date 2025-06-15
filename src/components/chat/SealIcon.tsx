@@ -3,12 +3,15 @@ import React from 'react';
 
 const SealIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
-    viewBox="0 0 512 512"
-    fill="currentColor"
+    viewBox="0 0 48 48"
+    fill="none"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
-    <path d="M352.4,136.4c-2.2-7.9-12-12.2-19.3-8.8c-7.3,3.4-10.1,13-7.8,20.9c12.3,42.4-3.3,88.4-39.3,116.4c-36,28-80.2,32.3-122.2,12.1c-2.8-1.3-5.9-1.9-8.9-1.9c-8.8,0-16.7,5.7-19.3,14.3c-2.6,8.6,1.5,18.1,9.7,21.8c51.9,23.9,109.9,18.5,157.9-14.3C363.3,270.4,374.5,200,352.4,136.4z M176,144c-17.7,0-32-14.3-32-32s14.3-32,32-32s32,14.3,32,32S193.7,144,176,144z" />
+    <g stroke="currentColor" strokeLinejoin="round" strokeWidth="4">
+      <path d="M24 44c11.046 0 20-8.954 20-20S35.046 4 24 4S4 12.954 4 24s8.954 20 20 20Z" />
+      <path strokeLinecap="round" d="M24 21v-4m-7 14s1 2 7 2s7-2 7-2m-3-7a2 2 0 1 0 4 0a2 2 0 1 0-4 0Zm-11 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0Z" />
+    </g>
   </svg>
 );
 
