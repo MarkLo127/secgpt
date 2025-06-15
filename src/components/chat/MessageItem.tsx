@@ -1,5 +1,5 @@
-import { User } from "lucide-react";
-import SealIcon from "./SealIcon";
+
+import { User, Bot } from "lucide-react";
 
 type Message = {
   role: "system" | "user" | "assistant";
@@ -24,7 +24,7 @@ const MessageItem = ({ message, t }: MessageItemProps) => {
             </div>
           ) : (
             <div className="w-10 h-10 rounded-full flex items-center justify-center bg-muted text-muted-foreground">
-              <SealIcon className="w-6 h-6" />
+              <Bot className="w-6 h-6" />
             </div>
           )}
         </div>
