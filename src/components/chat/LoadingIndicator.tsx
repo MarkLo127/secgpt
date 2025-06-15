@@ -1,15 +1,12 @@
+import SealIcon from "./SealIcon";
 
 const SEAL_ICON_URL = "https://images.unsplash.com/photo-1563897539352-870624131b32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80";
 
 const LoadingIndicator = () => {
     return (
         <div className="flex items-start gap-4">
-            <div className="w-10 h-10 rounded-full flex items-center justify-center shrink-0">
-                <img
-                    src={SEAL_ICON_URL}
-                    alt="SECGPT Seal Icon"
-                    className="w-10 h-10 rounded-full object-cover"
-                />
+            <div className="w-10 h-10 rounded-full flex items-center justify-center shrink-0 bg-muted text-muted-foreground">
+                <SealIcon className="w-6 h-6" />
             </div>
             <div className="flex-1 pt-1.5">
                 <p className="font-semibold text-foreground">SECGPT</p>

@@ -1,5 +1,5 @@
-
 import { User } from "lucide-react";
+import SealIcon from "./SealIcon";
 
 type Message = {
   role: "system" | "user" | "assistant";
@@ -10,8 +10,6 @@ interface MessageItemProps {
   message: Message;
   t: (key: string) => string;
 }
-
-const SEAL_ICON_URL = "https://images.unsplash.com/photo-1563897539352-870624131b32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80";
 
 const MessageItem = ({ message, t }: MessageItemProps) => {
   const isUser = message.role === "user";
@@ -25,11 +23,9 @@ const MessageItem = ({ message, t }: MessageItemProps) => {
               <User className="h-6 w-6" />
             </div>
           ) : (
-            <img
-              src={SEAL_ICON_URL}
-              alt="SECGPT Seal Icon"
-              className="w-10 h-10 rounded-full object-cover"
-            />
+            <div className="w-10 h-10 rounded-full flex items-center justify-center bg-muted text-muted-foreground">
+              <SealIcon className="w-6 h-6" />
+            </div>
           )}
         </div>
         <div className={`flex-1 pt-1.5 ${isUser ? 'text-right' : 'text-left'}`}>
